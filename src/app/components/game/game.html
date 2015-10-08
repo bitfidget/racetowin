@@ -1,0 +1,13 @@
+<h5>Game HTML -  Track:{{vm.room}}   Horse: {{vm.horse}}</h5>
+<div class="game-area">
+	<div class="position-overview">
+		<div class="track">
+			<div class="track-horse" style="left:{{horse.distance}}%;background-color:{{horse.color}}" ng-repeat="horse in vm.realtime.selectedRace.horses"></div>
+		</div>
+	</div>
+
+	<div class="game-controller">
+		<div class="whip" style="background-color:{{vm.realtime.selectedRace.horses[vm.horse].color}}" ng-click="vm.realtime.setDistance(vm.horse,1)"></div>
+	</div>
+
+</div>
