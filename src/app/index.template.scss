@@ -1,0 +1,119 @@
+/* mobile only display for now */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a:link,
+a:visited{
+	color: #333;
+}
+
+body{
+	font-family: Arial, sans-serif;
+	background: #EFEFEF;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+.clickable{
+	cursor: pointer;
+}
+
+.hidden{
+	display: none;
+}
+
+.main-column{
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+#wrapper{
+	display: block;
+}
+
+.container{
+
+}
+
+#footer{
+	font-size: 11px;
+	color: #3F3F40;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#header{
+	display: block;
+	width: 100%;
+	text-align: center;
+	z-index: 1001;
+	margin-bottom: -50px;
+}
+
+.css-table{
+	border: solid 1px lighten($Grey, 40%);
+	border-radius: 5px;
+}
+
+.css-row{
+}
+
+.css-cell{
+	float: left;
+	display: block;
+	padding: 5px;
+}
+
+.btn-panel{
+	border-top: solid 1px #FFF;
+	border-bottom: solid 1px darken($LightGrey, 5%);	
+	border-left: solid 1px #FFF;
+	border-right: solid 1px darken($LightGrey, 5%);
+	background: lighten($LightGrey, 5%);
+}
+
+.profile,
+.races{
+	display: block;
+	background: #FFF;
+	margin: 40px 0 10px 0;
+	border-radius: 5px;
+}
+
+.profile img,
+.races img{
+	width: 30%;
+	margin: -20px -20px 0 0 ;
+	float: right;
+}
+
+h1{
+	color: $Maroon;
+	font-size: 24px;
+	font-weight: bold;
+
+}
