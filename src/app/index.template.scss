@@ -75,7 +75,6 @@ div {
 }
 
 .css-table{
-	border: solid 1px lighten($Grey, 40%);
 	border-radius: 5px;
 }
 
@@ -100,20 +99,32 @@ div {
 .races{
 	display: block;
 	background: #FFF;
-	margin: 40px 0 10px 0;
+	margin: 50px 0 0 0;
 	border-radius: 5px;
+	text-align: center;
 }
 
 .profile img,
 .races img{
-	width: 30%;
-	margin: -20px -20px 0 0 ;
-	float: right;
+	width: 40%;
+	margin: -20px auto -10px;
 }
 
 h1{
-	color: $Maroon;
+	color: $Burgundy;
 	font-size: 24px;
 	font-weight: bold;
+}
 
+a.btn-primary,
+.btn-primary{
+	color: #FFF;
+	background: $Burgundy;
+	border: none;
+}
+
+a.btn-secondary,
+.btn-secondary{
+	color: #FFF;
+	background: $Orange;
 }
