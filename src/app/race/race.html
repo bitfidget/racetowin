@@ -1,22 +1,16 @@
 <div class="container">
-	<h3>Select Race - {{race.selectedRaceRoom}}</h3>
-</div>
+	<h3>Select Race - {{race.selectedRace}}</h3>
+	<div><input type="text" ng-model="race.raceName" placeholder="race"></div>
+	<div><input type="text" ng-model="race.jockeyName" placeholder="jockey"></div>
+	<div><input type="text" ng-model="race.horseName" placeholder="horse"></div>
+	<div><input type="text" ng-model="race.speed" placeholder="speed [.8]"></div>
+	<div>
+		<button ng-click="race.jockeyName='J1';race.horseName='H1';race.speed=.6">1</button>
+		<button ng-click="race.jockeyName='J2';race.horseName='H2';race.speed=.8">2</button>
+		<button ng-click="race.jockeyName='J3';race.horseName='H3';race.speed=.9">3</button>
+		<button ng-click="race.jockeyName='J4';race.horseName='H4';race.speed=1.3">4</button>
+	</div>
 
-<!-- <div class="container" >
-	<div class="row">
-		<h2>{{race.selectedRaceRoom}}</h2>
-	</div>
-	<div class="row">
-		<game room="race.selectedRaceRoom"></game>
-	</div>
-</div> -->
+	<game race="{{race.raceName}}" jockey="{{race.jockeyName}}" horse="{{race.horseName}}" speed="{{race.speed}}"  >
 
-<div class="container" >
-	<div class="row">
-	  <div class="col-sm-6 col-md-4" ng-repeat="(roomName,room) in race.raceRooms">
-	    <div class="thumbnail" ng-click="race.selectRace(roomName)" >
-			{{roomName}}
-	    </div>
-	  </div>
-	</div>
 </div>
