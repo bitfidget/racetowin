@@ -22,10 +22,18 @@
   <body>
 
     <div id="header">
+        <div class="pull-left btn">
+            <img src="/assets/svg/PwC.svg" alt="PwC" id="PwC" width="40">
+        </div>
+        <div class="pull-right btn btn-hamburger" ng-click="hamburger">
+            <i class="glyphicon glyphicon-menu-hamburger"></i>
+        </div>
         <div class="main-column p10">
-            <img src="/assets/svg/final-logo-01.svg" alt="Race to win" width="100%">
+            <h1>Horsing Around</h1>
         </div>
     </div>
+
+    <hamburger id="hamburger"></hamburger>
 
     <div id="wrapper" class="p20 main-column">
         <!--[if lt IE 10]>
