@@ -14,28 +14,28 @@
       })
       .when('/our-prediction', {
         templateUrl: 'app/main/our-prediction.html',
-        controller: 'OurPredictionController',
-        controllerAs: 'ourPrediction'
+        controller: 'MainController',
+        controllerAs: 'main'
       })
       .when('/winning-profile', {
         templateUrl: 'app/main/winning-profile.html',
-        controller: 'WinningProfileController',
-        controllerAs: 'winningProfile'
+        controller: 'MainController',
+        controllerAs: 'main'
       })
       .when('/social', {
         templateUrl: 'app/main/social.html',
-        controller: 'SocialController',
-        controllerAs: 'social'
+        controller: 'MainController',
+        controllerAs: 'main'
       })
       .when('/the-form', {
         templateUrl: 'app/main/the-form.html',
-        controller: 'TheFormController',
-        controllerAs: 'theForm'
+        controller: 'MainController',
+        controllerAs: 'main'
       })
       .when('/credits', {
         templateUrl: 'app/main/credits.html',
-        controller: 'CreditsController',
-        controllerAs: 'credits'
+        controller: 'MainController',
+        controllerAs: 'main'
       })
       .when('/race-to-win/', {
         templateUrl: 'app/race/race-home.html',
