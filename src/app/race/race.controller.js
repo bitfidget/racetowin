@@ -6,19 +6,18 @@
     .controller('RaceController', RaceController);
 
   /** @ngInject */
-  function RaceController(realtime, $location, $routeParams) {
+  function RaceController($location, $routeParams) {
     var vm = this;
 
-	vm.raceName = "aaaqqqqq";
-	vm.raceRooms = realtime.raceRooms;
-	vm.selectedRaceRoom = $routeParams.raceName;
+    //test data
+    vm.raceName     = 'r10';
+    vm.jockeyName   = 'j1';
+    vm.horseName    = 'h1';
+    vm.speed        = '.8';
+
+	vm.selectedRace = $routeParams.raceName;
 	console.log($routeParams);
 
-	vm.selectRace = function(raceName){
-		console.log(raceName);
-		// realtime.setSelectedRace(raceName);
-		$location.path('race/'+raceName);
-	}
 
 
   }
