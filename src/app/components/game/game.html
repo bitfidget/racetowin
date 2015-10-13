@@ -1,10 +1,4 @@
 <button type="button" name="button" ng-click="vm.joinRace()">Join Race</button>
-<h3>params: {{vm.race}} : {{vm.jockey}} : {{vm.horse}}</h3>
-
-
-<h5>Game HTML -  Track:{{vm.room}}   Horse: {{vm.horse}}</h5>
-
-<div ng-repeat="horse in vm.horses()">{{horse}}</div>
 <div class="game-area">
 	<div class="position-overview">
 		<div class="track">
@@ -14,7 +8,6 @@
 	<game-canvas></game-canvas>
 
 	<div class="game-controller">
-		<div class="whip" style="background-color:blue" ng-click="vm.updateDistance()"></div>
 		<div class="whip" style="background-color:blue" ng-click="vm.startTest()">Start Test</div>
 	</div>
 	<div>
