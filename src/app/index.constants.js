@@ -5,6 +5,7 @@
   angular
     .module('melbournecup')
     .constant('malarkey', malarkey)
-    .constant('moment', moment);
+    .constant('moment', moment)
+    .constant('firebaseBasePath', 'https://horserace.firebaseio.com/');
 
 })();
