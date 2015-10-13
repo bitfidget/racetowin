@@ -2,9 +2,9 @@
 <html ng-app="melbournecup">
   <head>
     <meta charset="utf-8">
-    <title>melbournecup</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <title>RACE to WIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
@@ -20,11 +20,35 @@
     <!-- endbuild -->
   </head>
   <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
-    <div ng-view></div>
+    <div id="header">
+        <div class="pull-left btn">
+            <img src="/assets/svg/PwC.svg" alt="PwC" id="PwC" width="40">
+        </div>
+        <div class="pull-right btn btn-hamburger" ng-click="hamburger">
+            <i class="glyphicon glyphicon-menu-hamburger"></i>
+        </div>
+        <div class="main-column p10">
+            <h1>Horsing Around</h1>
+        </div>
+    </div>
+
+    <hamburger id="hamburger"></hamburger>
+
+    <div id="wrapper" class="main-column">
+        <!--[if lt IE 10]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div ng-view></div>
+    </div>
+
+    <div id="footer">
+        <div class="main-column p20 pt0">
+            &copy; 2015 All rights reserved
+        </div>
+    </div>
+    
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
