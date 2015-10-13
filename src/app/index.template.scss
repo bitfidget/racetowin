@@ -10,12 +10,14 @@
 
 a:link,
 a:visited{
-	color: #333;
+	color: #FFF;
+	text-decoration: none;
 }
 
 body{
 	font-family: "ITC Charter","Georgia",serif;
-	background: #EFEFEF;
+	background: $Maroon;
+  color: #FFF;
   font-size: 13px;
   line-height: 18px;
 }
@@ -23,6 +25,10 @@ body{
 p, ol, ul, td {
   font-size: 13px;
   line-height: 18px;
+}
+
+img{
+	max-width: 100%;
 }
 
 pre {
@@ -87,6 +93,7 @@ div {
 	font-size: 24px;
 	margin: 10px auto;
 	color: #FFF;
+	line-height: 40px;
 }
 
 #header .btn{
@@ -133,9 +140,9 @@ div {
 }
 
 h1{
-	color: $Burgundy;
 	font-size: 24px;
 	font-weight: bold;
+	line-height: 100%;
 }
 
 a.btn-primary,

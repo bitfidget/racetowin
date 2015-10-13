@@ -25,11 +25,12 @@
     function HamburgerController() {
       var vm = this;
 
-      debugger
-
       $('.btn-hamburger').on('click touch', function(event) {
         event.preventDefault();
         $('#hamburger').toggleClass('active');
+      })
+      $('#hamburger').on('click touch', function(event) {
+        $(event.currentTarget).removeClass('active')
       })
       
 
