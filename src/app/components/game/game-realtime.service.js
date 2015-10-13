@@ -14,7 +14,7 @@
     var userRaceName = "";
 
     var selectedRace = null; // data object
-    var selectedHorse = null; //data object
+    //var selectedHorse = null; //data object
 
     var timer = null;
     var currentSpeed = 0;
@@ -24,7 +24,9 @@
         raceData: null,
         startRace: startRace,
         updateDistance: updateDistance,
-        updateSpeed: updateSpeed
+        updateSpeed: updateSpeed,
+        setSpeed: setSpeed,
+        selectedHorse:null
     };
 
 
@@ -65,7 +67,7 @@
         service.raceData["horses"][horseName] = {'jockey':jockeyName, 'speed':speed, 'distance':0};
         service.raceData.$save().then(
             function(success){
-                selectedHorse = $firebaseObject(new Firebase(basePath+ 'races/' + userRaceName + '/horses/' + horseName) );
+                service.selectedHorse = $firebaseObject(new Firebase(basePath+ 'races/' + userRaceName + '/horses/' + horseName) );
 
             },
             function(error){
@@ -77,12 +79,11 @@
     }
 
     function updateDistance(){
-        debugger;
-        var _distance = parseFloat(selectedHorse.distance);
+        var _distance = parseFloat(service.selectedHorse.distance);
         if(_distance<100){
 
-            selectedHorse.distance = parseFloat(selectedHorse.speed) + _distance;
-            selectedHorse.$save();
+            service.selectedHorse.distance = parseFloat(service.selectedHorse.speed) + _distance;
+            service.selectedHorse.$save();
         }else{
             $interval.cancel(timer);
         }
@@ -93,15 +94,20 @@
         console.log('start race');
         timer = $interval(function(){
             updateDistance();
-            console.log("--- : " + selectedHorse.distance);
+            console.log("--- : " + service.selectedHorse.distance);
 
         },1000);
     }
 
     function updateSpeed(speedDelta){
-        var _speed = parseFloat(selectedHorse.speed);
-        selectedHorse.speed = _speed + speedDelta;
-        selectedHorse.$save();
+        var _speed = parseFloat(service.selectedHorse.speed);
+        service.selectedHorse.speed = _speed + speedDelta;
+        service.selectedHorse.$save();
+    }
+
+    function setSpeed(speed){
+        service.selectedHorse.speed = speed;
+        service.selectedHorse.$save();
     }
 
 

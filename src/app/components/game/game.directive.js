@@ -41,6 +41,10 @@
           gameRealtime.updateDistance();
       }
 
+      vm.setSpeed= function(speed){
+         gameRealtime.setSpeed(speed);
+      }
+
       vm.horses = function(){
           //return [1,2,3,4];
           if(gameRealtime["raceData"]){
