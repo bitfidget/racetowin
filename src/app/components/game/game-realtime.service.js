@@ -6,7 +6,7 @@
     .factory('gameRealtime', gameRealtimeConnector);
 
   /** @ngInject */
-  function gameRealtimeConnector($log, $firebaseObject, firebaseBasePath, $interval) {
+  function gameRealtimeConnector( $firebaseObject, firebaseBasePath, $interval) {
 	var basePath = firebaseBasePath;
 
 
@@ -91,11 +91,8 @@
     }
 
     function startRace(){
-        console.log('start race');
         timer = $interval(function(){
             updateDistance();
-            console.log("--- : " + service.selectedHorse.distance);
-
         },1000);
     }
 
