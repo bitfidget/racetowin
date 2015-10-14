@@ -1,5 +1,8 @@
 /* mobile only display for now */
 
+$normal: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$charter: "ITC Charter","Georgia",serif;
+
 *,
 *:before,
 *:after {
@@ -9,17 +12,28 @@
 }
 
 a:link,
-a:visited{
+a:visited,
+.btn:hover,
+.btn:visited{
 	color: #FFF;
 	text-decoration: none;
+	border: none;
+	box-shadow: none;
 }
 
 body{
-	font-family: "ITC Charter","Georgia",serif;
+	font-family: $normal;
 	background: $Maroon;
   color: #FFF;
   font-size: 13px;
   line-height: 18px;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $charter;
+	font-weight: 800;
+	letter-spacing: 1px;
+	font-style: italic;
 }
 
 p, ol, ul, td {
@@ -82,7 +96,7 @@ div {
 	height: 60px;
 	color: #FFF;
 	line-height: 40px;
-	box-shadow: 0 2px 2px -2px lighten($Maroon, 5%);
+	box-shadow: 0 2px 2px -2px lighten(#000, 5%);
 }
 
 #header .main-column{
@@ -100,8 +114,6 @@ div {
 	padding: 15px;
 	font-size: 24px;
 }
-
-
 
 .css-table{
 	border-radius: 5px;
@@ -156,4 +168,12 @@ a.btn-secondary,
 .btn-secondary{
 	color: #FFF;
 	background: $Orange;
+}
+
+#heading-home{
+	position: fixed;
+	top: 100px;
+	left: 0;
+	width: 100%;
+	color: $Maroon;
 }

@@ -20,30 +20,38 @@
 
 	}
 
-	.building-bg{
+
+  .building-bg{
 		width: 1000%;
-		height: 800px;
-		background-image: url(../assets/images/building_bg.png);
+    height: 800px;
+    top: 150px;
+    background-size: 1300px;
+    background-image: url(../assets/images/building_bg.png);
 	}
 
 	.building-fg{
-		width: 1400%;
-		height: 800px;
+		width: 4000%;
+    height: 300px;
+    top: 300px;
+    background-size: 750px;
 		background-image: url(../assets/images/building_fg.png);
 	}
 
 	.tree-bg{
 		width: 10000%;
-		height: 440px;
-		top: 230px;
+    height: 440px;
+    top: 440px;
+    background-size: 800px;
 		background-image: url(../assets/images/tree_bg_loop.png);
 	}
 
 	.tree-fg{
-
-		width: 12000%;
-		height: 200px;
-		top: 450px;
+		width: 10000%;
+    height: 200px;
+    top: 490px;
+    background-size: 1700px;
+    background-repeat-x: initial;
+    background-repeat-y: no-repeat;
 		background-image: url(../assets/images/tree_fg_loop.png);
 
 	}
