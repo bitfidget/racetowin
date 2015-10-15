@@ -1,10 +1,11 @@
-<button type="button" name="button" ng-click="vm.joinRace()">Join Race</button>
+<button type="button" name="button" ng-click="vm.joinRace()">Join Race - {{vm.getStatus()}}-</button>
 <div class="game-area">
 	<div class="position-overview">
 		<div class="track">
 			<div class="track-horse" style="left:{{horse.distance}}%;background-color:{{horse.color}}" ng-repeat="horse in vm.horses()">{{horse.speed}}</div>
 		</div>
 	</div>
+
 	<game-canvas></game-canvas>
 
 	<div class="game-controller">

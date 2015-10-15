@@ -24,7 +24,7 @@
     return directive;
 
     /** @ngInject */
-    function GameController(gameRealtime) {
+    function GameController(gameRealtime, $scope) {
       var vm = this;
 
 
@@ -35,6 +35,19 @@
 
       vm.joinRace = function(){
          gameRealtime.joinRace(vm.race,vm.jockey, vm.horse, vm.speed);
+      }
+
+      $scope.$on('StartGameEvent', function(event, data){
+          console.log(data);
+          gameRealtime.joinRace(data.raceName,data.jockeyName, data.horseName, data.speed);
+      });
+
+      vm.getStatus = function(){
+          if(gameRealtime["raceData"]){
+              return gameRealtime['raceData']['state'];
+          }else{
+              return '';
+          }
       }
 
       vm.updateDistance = function(){

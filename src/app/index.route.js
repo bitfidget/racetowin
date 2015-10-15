@@ -57,6 +57,11 @@
         controller: 'RaceController',
         controllerAs: 'race'
       })
+      .when('/race-to-win/race/:raceName', {
+        templateUrl: 'app/race/race.html',
+        controller: 'RaceController',
+        controllerAs: 'race'
+      })
       .otherwise({
         redirectTo: '/'
       });
