@@ -42,20 +42,20 @@
         controller: 'RaceHomeController',
         controllerAs: 'raceHome'
       })
-      .when('/race-to-win/race/', {
-        templateUrl: 'app/race/race.html',
-        controller: 'RaceController',
-        controllerAs: 'race'
-      })
+    //   .when('/race-to-win/race/', {
+    //     templateUrl: 'app/race/race.html',
+    //     controller: 'RaceController',
+    //     controllerAs: 'race'
+    //   })
       .when('/race-to-win/leaderboard/', {
         templateUrl: 'app/race/leaderboard.html',
         controller: 'LeaderboardController',
         controllerAs: 'leaderboard'
       })
-      .when('/race-to-win/race/:raceName', {
-        templateUrl: 'app/race/race_user_selector.html',
-        controller: 'RaceUserSelectorController',
-        controllerAs: 'userSelection'
+      .when('/race-to-win/race', {
+        templateUrl: 'app/race/race.html',
+        controller: 'RaceController',
+        controllerAs: 'race'
       })
       .otherwise({
         redirectTo: '/'

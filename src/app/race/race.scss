@@ -1,3 +1,45 @@
+.game-container{
+	border:1px solid red;
+	height: 680px;
+	width: 500px;
+
+
+	transform: scale(1);
+
+	@media (min-width: 300px) and (max-width: 550px) {
+		transform: scale(.8);
+	}
+
+	@media (min-width: 550px) and (max-width: 700px) {
+		transform: scale(.9);
+	}
+	@media (min-width: 700px) and (max-width: 900px) {
+		transform: scale(1);
+	}
+
+}
+
+
+.predefined-games{
+	border: 1px solid green;
+
+	.race-selection{
+		border: 1px solid green;
+		margin: 7px;
+		width: 150px;
+		height: 150px;
+		display: inline-block;
+	}
+}
+
+
+
+
+
+
+
+
+/************   old ***/
 .horse-selection{
 	border:1px solid grey;
 	padding: 10px;
