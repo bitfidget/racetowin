@@ -1,7 +1,4 @@
-
-
 <div class="container">
-
 	<div class="game-container">
 		<div class="predefined-games" ng-show="race.state=='PREDEFINED_RACE_SELECTION'">
 			<div class="race-selection"  ng-repeat="(raceName,raceData) in race.races" ng-click="race.selectRace(raceName)">{{raceName}}</div>
@@ -10,17 +7,4 @@
 			<game race="{{race.raceName}}" jockey="{{race.jockeyName}}" horse="{{race.horseName}}" speed="{{race.speed}}"  >
 		</div>
 	</div>
-
-
-
-	<div>
-		<button ng-click="race.jockeyName='J1';race.horseName='H1';race.speed=1.2">1</button>
-		<button ng-click="race.jockeyName='J2';race.horseName='H2';race.speed=1.4">2</button>
-		<button ng-click="race.jockeyName='J3';race.horseName='H3';race.speed=1.6">3</button>
-		<button ng-click="race.jockeyName='J4';race.horseName='H4';race.speed=1.8">4</button>
-	</div>
-	<div>{{race.selectedRace}}</div>
-
-
-
 </div>

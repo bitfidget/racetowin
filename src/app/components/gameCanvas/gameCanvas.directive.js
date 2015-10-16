@@ -30,6 +30,20 @@
 
       gc.getPosition = function(){
           if(gameRealtime.selectedHorse){
+
+              if(gameRealtime.selectedHorse.distance>0){
+                  gc.state = "PLAYING";
+                  if(gameRealtime.selectedHorse.distance>=100){
+                      gc.state = "RESULT";
+                      gameRealtime.setRaceTime(2345);
+                  }
+              }else{
+                  gc.state = "WAITING";
+              }
+
+
+
+
               return gameRealtime.selectedHorse.distance;
           }else{
               return 0;

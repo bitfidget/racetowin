@@ -28,7 +28,8 @@
         updateDistance: updateDistance,
         updateSpeed: updateSpeed,
         setSpeed: setSpeed,
-        selectedHorse:null
+        selectedHorse:null,
+        setRaceTime: setRaceTime
     };
 
 
@@ -81,6 +82,7 @@
 
     }
 
+
     function userJoined(){
         if(Object.keys(service.raceData.horses).length>minUsers){
             service.raceData.state = "START_COUNT_DOWN";
@@ -128,6 +130,11 @@
 
     function setSpeed(speed){
         service.selectedHorse.speed = speed;
+        service.selectedHorse.$save();
+    }
+
+    function setRaceTime(timeInMs){
+        service.selectedHorse.raceTime = timeInMs;
         service.selectedHorse.$save();
     }
 
