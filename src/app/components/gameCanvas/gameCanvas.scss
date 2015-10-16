@@ -1,8 +1,8 @@
 .game-canvas-area{
 
 	background-color: #99dbf9;
-	min-height: 800px;
-	max-width: 600px;
+	height: 670px;
+	width: 488px;
 	position: relative;
 	overflow: hidden;
 
@@ -66,13 +66,15 @@
 
 	}
 
+
+
 	.horse-group{
 		position: absolute;
 		width: 100%;
 		height: 280px;
 		bottom: 0px;
 		padding: 1px;
-
+		display: none;
 		left:15%;
 	}
 
@@ -120,6 +122,13 @@
 		}
 	}
 
+}
+
+
+.game-start{
+	.horse-group{
+		display: block !important;
+	}
 }
 
 @keyframes horse-run {

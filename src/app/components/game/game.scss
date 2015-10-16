@@ -1,10 +1,16 @@
 .game-area{
-	border: 1px solid green;
+	border: 4px solid green;
+	position: relative;
 }
 
 .position-overview{
-	border: 1px solid red;
+	border: 1px solid white;
+	background-color: rgba(255, 255, 255, .3);
 	min-height: 30px;
+	position: absolute;
+	z-index: 4000;
+	width:100%;
+
 	.track{
 		border: 2px solid grey;
 		border-radius: 15px;
@@ -30,10 +36,45 @@
 
 }
 
+.messages{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 5000;
+	padding-top: 300px;
+	text-align: center;
+	background-color: rgba(0,0,0,.3);
+	.waiting{
+		display: none;
+		background-color: rgba(255,255,255,.5);
+		// min-height: 100px;
+		padding: 30px;
+	}
+	.coutdown{
+		display: none;
+	}
+	.game-result{
+		display: none;
+	}
+}
+
+.waiting .messages .waiting{
+	display: block;
+}
+.coutdown .messages .coutdown{
+	display: block;
+}
+.game-result .messages .game-result{
+	display: block;
+}
+
+.game-start .messages{
+	display: none;
+}
+
 .game-controller{
 	border: 1px dotted blue;
 	.whip{
-		border: 1px solid rgba(0, 255, 0, .6);
 		background-color: rgba(0, 255, 0, .4);
 		width: 100px;
 		height: 100px;

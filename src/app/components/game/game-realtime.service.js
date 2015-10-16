@@ -6,17 +6,19 @@
     .factory('gameRealtime', gameRealtimeConnector);
 
   /** @ngInject */
-  function gameRealtimeConnector($log, $firebaseObject, firebaseBasePath, $interval) {
+  function gameRealtimeConnector( $firebaseObject, firebaseBasePath, $interval) {
 	var basePath = firebaseBasePath;
 
 
     var userHorseName = "";
     var userRaceName = "";
+    var minUsers = 2; //minum number of users - 1
 
     var selectedRace = null; // data object
     //var selectedHorse = null; //data object
 
     var timer = null;
+    var countDownTimer = null;
     var currentSpeed = 0;
 
     var service = {
@@ -26,7 +28,8 @@
         updateDistance: updateDistance,
         updateSpeed: updateSpeed,
         setSpeed: setSpeed,
-        selectedHorse:null
+        selectedHorse:null,
+        setRaceTime: setRaceTime
     };
 
 
@@ -55,7 +58,7 @@
         }else{
             //if no one joined the race create a horse list
             service.raceData["horses"] = {}
-            service.raceData.startsInSeconds = 20;
+            service.raceData.startsInSeconds = 4;
             //first person who joins in becomes the host of game
             service.raceData.host = horseName;
             //all states "INITIALISED", "WAITING_FOR_USERS", "WAITING_MINIMUM_USERS_JOINED",
@@ -67,6 +70,7 @@
         service.raceData["horses"][horseName] = {'jockey':jockeyName, 'speed':speed, 'distance':0};
         service.raceData.$save().then(
             function(success){
+                userJoined();
                 service.selectedHorse = $firebaseObject(new Firebase(basePath+ 'races/' + userRaceName + '/horses/' + horseName) );
 
             },
@@ -76,6 +80,28 @@
         );
 
 
+    }
+
+
+    function userJoined(){
+        if(Object.keys(service.raceData.horses).length>minUsers){
+            service.raceData.state = "START_COUNT_DOWN";
+            service.raceData.$save();
+            countDownTimer = $interval(function(){
+                updateServerTimer();
+            },1000);
+        }
+
+    }
+
+    function updateServerTimer(){
+        service.raceData.startsInSeconds = parseInt(service.raceData.startsInSeconds)-1;
+        service.raceData.$save();
+        if(service.raceData.startsInSeconds<1){
+            $interval.cancel(countDownTimer);
+            service.raceData.state = "START_GAME";
+            service.raceData.$save();
+        }
     }
 
     function updateDistance(){
@@ -91,11 +117,8 @@
     }
 
     function startRace(){
-        console.log('start race');
         timer = $interval(function(){
             updateDistance();
-            console.log("--- : " + service.selectedHorse.distance);
-
         },1000);
     }
 
@@ -107,6 +130,11 @@
 
     function setSpeed(speed){
         service.selectedHorse.speed = speed;
+        service.selectedHorse.$save();
+    }
+
+    function setRaceTime(timeInMs){
+        service.selectedHorse.raceTime = timeInMs;
         service.selectedHorse.$save();
     }
 

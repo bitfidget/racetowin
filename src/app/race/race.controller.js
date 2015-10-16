@@ -6,17 +6,47 @@
     .controller('RaceController', RaceController);
 
   /** @ngInject */
-  function RaceController($location, $routeParams) {
+  function RaceController($location, $routeParams, $scope) {
     var vm = this;
 
     //test data
-    vm.raceName     = 'r10';
-    vm.jockeyName   = 'j1';
-    vm.horseName    = 'h1';
+    vm.raceName     = '';
+    vm.jockeyName   = '';
+    vm.horseName    = '';
     vm.speed        = '.8';
 
-	vm.selectedRace = $routeParams.raceName;
-	console.log($routeParams);
+    vm.selectedRace = '';
+
+    vm.state = 'PREDEFINED_RACE_SELECTION'; //OTHER STATES - "PREDEFINED_RACE_SELECTION", "RACE_SELECTION", "GAME_SCREEN"
+
+    if($routeParams.raceName){
+        vm.selectRace($routeParams.raceName);
+    }
+
+
+
+    vm.selectRace = function(race){
+        vm.raceName = race;
+
+        var _val = Math.round(Math.random()*100000);
+        vm.horseName = 'H_' + _val;
+        vm.jockeyName   = 'J_' + _val;
+        vm.state = 'GAME_SCREEN';
+        $scope.$broadcast('StartGameEvent', {raceName:vm.raceName,horseName:vm.horseName,jockeyName:vm.jockeyName,speed:vm.speed});
+    };
+
+    vm.races = {
+                    'Race1':{horses:{'H1':{},'J1':{}}},
+                    'Race2':{horses:{'H2':{},'J1':{}}},
+                    'Race3':{horses:{'H3':{},'J1':{}}},
+                    'Race4':{horses:{'H4':{},'J1':{}}},
+                    'Race5':{horses:{'H5':{},'J1':{}}}
+                };
+
+
+
+
+
 
 
 

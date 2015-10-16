@@ -1,14 +1,21 @@
-<button type="button" name="button" ng-click="vm.joinRace()">Join Race</button>
-<div class="game-area">
+
+<div class="game-area" ng-class="{'waiting':(vm.getStatus()=='INITIALISED'), 'coutdown':(vm.getStatus()=='START_COUNT_DOWN'), 'game-start':(vm.getStatus()=='START_GAME'), 'game-result':(vm.getStatus()=='GAME_RESULT')}">
 	<div class="position-overview">
 		<div class="track">
 			<div class="track-horse" style="left:{{horse.distance}}%;background-color:{{horse.color}}" ng-repeat="horse in vm.horses()">{{horse.speed}}</div>
 		</div>
 	</div>
+	<div class="messages">
+		
+		<div class="waiting"><h1>Waiting for other users to join....</h1></div>
+		<div class="coutdown"><h1>Game starts in - {{vm.getCountDownTime()}}</h1></div>
+		<div class="game-result"><h1>Game result</h1></div>
+	</div>
+
 	<game-canvas></game-canvas>
 
 	<div class="game-controller">
-		<div class="whip" style="background-color:blue" ng-click="vm.startTest()">Start Test</div>
+		- Game controller -
 	</div>
 	<div>
 		<button ng-click="vm.setSpeed(1)">30</button>
