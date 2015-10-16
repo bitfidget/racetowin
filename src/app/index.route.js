@@ -1,4 +1,4 @@
--(function() {
+  (function() {
   'use strict';
 
   angular
@@ -17,10 +17,10 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
-      .when('/winning-profile', {
-        templateUrl: 'app/main/winning-profile.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+      .when('/spurious-correlations', {
+        templateUrl: 'app/main/spurious-correlations.html',
+        controller: 'SpuriousCorrelationsController',
+        controllerAs: 'scc'
       })
       .when('/social', {
         templateUrl: 'app/main/social.html',

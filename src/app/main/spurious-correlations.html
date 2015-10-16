@@ -1,0 +1,40 @@
+<h1 class="p20 centered first">Spur-rious Horsey Correlations</h1>
+
+<div class="container correlations">
+	<select name="correlationOptions" id="correlationOptions" ng-model="correlationSelect" ng-options="correlation as correlation.name for correlation in correlations"></select>
+
+  {{correlationSelect.name}}
+
+	<div id="charts">
+
+    <nvd3-line-chart
+      data="correlationSelect.data2"
+      id="left"
+      height="500"
+      showXAxis="true"
+      showYAxis="true"
+      margin="{left:45,top:15,bottom:35,right:15}"
+      tooltips="true"
+      yaxislabel="{{correlationSelect.data2.key}}"
+      >
+      <svg></svg>
+    </nvd3-line-chart>
+
+    <nvd3-line-chart
+      data="correlationSelect.data1"
+      id="right"
+      height="500"
+      showXAxis="false"
+      showYAxis="true"
+      yaxislabel="fucking label"
+      margin="{left:45,top:15,bottom:35,right:15}"
+      tooltips="true"
+      yaxislabeldistance="0"
+      isArea="true"
+      >
+      <svg></svg>
+    </nvd3-line-chart>
+
+    </div>
+
+</div>
