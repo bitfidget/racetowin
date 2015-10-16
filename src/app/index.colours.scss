@@ -25,7 +25,14 @@ $LightGrey: #EFEFEF;
 
 /* colours - backgrounds */
 
-
 .bg-lgrey{
 	background: lighten($Grey, 40%)
+}
+
+/* backgournd images */
+
+.container#home{
+	background: #579546 url(../assets/svg/home-image.svg) center no-repeat;
+	background-size: cover;
+	color: $Maroon;
 }

@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('melbournecup', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ngRoute', 'toastr' ,'firebase']);
+    .module('melbournecup', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ngRoute', 'toastr' ,'firebase', 'nvd3ChartDirectives']);
 
 })();

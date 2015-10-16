@@ -27,6 +27,7 @@ body{
   color: #FFF;
   font-size: 13px;
   line-height: 18px;
+  overflow: hidden;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -79,9 +80,12 @@ div {
 #footer{
 	font-size: 11px;
 	background: $DarkGrey;
-	color: #3F3F40;
+	color: #FFF;
 	width: 100%;
 	margin: 0 auto;
+	p{
+		margin: 10px 0;
+	}
 }
 
 #header{
@@ -104,7 +108,7 @@ div {
 }
 
 #header h1{
-	font-size: 24px;
+	font-size: 18px;
 	margin: 10px auto;
 	color: #FFF;
 	line-height: 40px;
@@ -113,6 +117,11 @@ div {
 #header .btn{
 	padding: 15px;
 	font-size: 24px;
+}
+
+.container,
+.row{
+	max-width: 100% !important;
 }
 
 .css-table{
@@ -157,6 +166,34 @@ h1{
 	line-height: 100%;
 }
 
+h1.first{
+	margin-top: 20px;
+}
+
+h2{
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 100%;
+	margin: 20px 0;
+}
+
+h3{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 100%;
+	margin: 20px 0;
+}
+
+p{
+	font-family: $charter;
+	margin: 20px 0 35px;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: normal;
+  font-style: italic;
+
+}
+
 a.btn-primary,
 .btn-primary{
 	color: #FFF;
@@ -170,10 +207,18 @@ a.btn-secondary,
 	background: $Orange;
 }
 
-#heading-home{
+#blurb-home{
 	position: fixed;
-	top: 100px;
+	top: 60px;
 	left: 0;
 	width: 100%;
 	color: $Maroon;
+}
+
+#warning-home{
+	position: fixed;
+	bottom: 10px;
+	left: 0;
+	width: 100%;
+	color: #FFF;
 }

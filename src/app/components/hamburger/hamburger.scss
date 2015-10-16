@@ -1,3 +1,14 @@
+/*#hamburger-container{
+	display: block;
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	position: absolute;
+	overflow: hidden;
+	background: none;
+	z-index: 0;
+}*/
+
 #hamburger{
 	display: block;
 	padding-top: 60px;
@@ -5,16 +16,22 @@
 	height: auto;
 	min-height: 100%;
 	position: absolute;
+	top: 0;
 	left: 100%;
 	color: #FFF;
 	background: rgba($DarkGrey, 0.9);
 	font-family: Arial, Sans-serif;
 	font-size: 22px;
 	transition: left ease .5s;
+	z-index: 1001;
 }
 
 #hamburger.active{
 	left: 0;
+}
+
+#wrapper{
+	overflow: hidden;
 }
 
 ul li{
