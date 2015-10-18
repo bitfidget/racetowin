@@ -32,6 +32,7 @@
         vm.horseName = 'H_' + _val;
         vm.jockeyName   = 'J_' + _val;
         vm.state = 'GAME_SCREEN';
+        vm.speed = 0.6 + (Math.random()/2);
         $scope.$broadcast('StartGameEvent', {raceName:vm.raceName,horseName:vm.horseName,jockeyName:vm.jockeyName,speed:vm.speed});
     };
 
