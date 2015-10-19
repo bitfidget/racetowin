@@ -6,6 +6,6 @@
     .module('melbournecup')
     .constant('malarkey', malarkey)
     .constant('moment', moment)
-    .constant('firebaseBasePath', 'https://horserace.firebaseio.com/');
+    .constant('firebaseBasePath', 'https://racetowin.firebaseio.com/');
 
 })();

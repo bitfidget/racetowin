@@ -17,6 +17,11 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      .when('/our-geeks-pick', {
+        templateUrl: 'app/main/our-geeks-pick.html',
+        controller: 'GeeksController',
+        controllerAs: 'geek'
+      })
       .when('/spurious-correlations', {
         templateUrl: 'app/main/spurious-correlations.html',
         controller: 'SpuriousCorrelationsController',
