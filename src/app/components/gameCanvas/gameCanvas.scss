@@ -15,16 +15,19 @@
 
 	.cloud{
 		width: 200%;
-		height: 200px;
+		height: 108px;
+		top: 30px;
+		background-size: 50%;
+
 		background-image: url(../assets/images/clouds.png);
 
 	}
 
 
   .building-bg{
-		width: 1000%;
+	width: 1000%;
     height: 800px;
-    top: 150px;
+    top: 30px;
     background-size: 1300px;
     background-image: url(../assets/images/building_bg.png);
 	}
@@ -32,15 +35,15 @@
 	.building-fg{
 		width: 4000%;
     height: 300px;
-    top: 300px;
+    top: 130px;
     background-size: 750px;
 		background-image: url(../assets/images/building_fg.png);
 	}
 
 	.tree-bg{
 		width: 10000%;
-    height: 440px;
-    top: 440px;
+    height: 200px;
+    top: 290px;
     background-size: 800px;
 		background-image: url(../assets/images/tree_bg_loop.png);
 	}
@@ -48,7 +51,7 @@
 	.tree-fg{
 		width: 10000%;
     height: 200px;
-    top: 490px;
+    top: 320px;
     background-size: 1700px;
     background-repeat-x: initial;
     background-repeat-y: no-repeat;
@@ -59,9 +62,9 @@
 	.ground{
 		position: absolute;
 		width: 100%;
-		height: 200px;
+		height: 225px;
 		bottom: 0px;
-		padding: 1px;
+		padding: 0px;
 		background-image: url(../assets/images/ground.png);
 
 	}
@@ -72,10 +75,49 @@
 		position: absolute;
 		width: 100%;
 		height: 280px;
-		bottom: 0px;
+		bottom: 85px;
 		padding: 1px;
 		display: none;
 		left:15%;
+	}
+
+	.horse-group{
+		// .horse:nth-child(1){
+		// 	bottom: 0px;
+		// 	transition: all 1s linear .02s;
+		// }
+		// .horse:nth-child(2){
+		// 	bottom: 5px;
+		// 	transition: all 1s linear .08s;
+		// }
+		// .horse:nth-child(3){
+		// 	bottom: 10px;
+		// 	transition: all 1s linear .10s;
+		// }
+		// .horse:nth-child(4){
+		// 	bottom: 15px;
+		// 	transition: all 1s linear .12s;
+		// }
+		// .horse:nth-child(5){
+		// 	bottom: 20px;
+		// 	transition: all 1s linear .14s;
+		// }
+		// .horse:nth-child(6){
+		// 	bottom: 25px;
+		// 	transition: all 1s linear .18s;
+		// }
+		// .horse:nth-child(7){
+		// 	bottom: 30px;
+		// }
+		// .horse:nth-child(8){
+		// 	bottom: 35px;
+		// }
+		// .horse:nth-child(9){
+		// 	bottom: 40px;
+		// }
+		// .horse:nth-child(10){
+		// 	bottom: 45px;
+		// }
 	}
 
 	.horseAlpha{
@@ -86,7 +128,7 @@
 		position: absolute;
 		width: 100%;
 		height: 380px;
-		bottom: 20px;
+
 		padding: 1px;
 		background-position: 50% 0;
 		background-size: 60%;

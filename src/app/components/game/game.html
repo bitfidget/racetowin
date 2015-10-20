@@ -1,8 +1,10 @@
 
 <div class="game-area" ng-class="{'waiting':(vm.getStatus()=='INITIALISED'), 'coutdown':(vm.getStatus()=='START_COUNT_DOWN'), 'game-start':(vm.getStatus()=='START_GAME'), 'game-result':(vm.getStatus()=='GAME_RESULT')}">
+
+
 	<div class="position-overview">
 		<div class="track">
-			<div class="track-horse" style="left:{{horse.distance}}%;background-color:{{horse.color}}" ng-repeat="horse in vm.horses()">{{horse.speed}}</div>
+			<div class="track-horse" style="left:{{horse.distance}}%;" ng-repeat="horse in vm.horses()"></div>
 		</div>
 	</div>
 	<div class="messages">
@@ -15,7 +17,22 @@
 	<game-canvas></game-canvas>
 
 	<div class="game-controller">
-		- Game controller -
+		<div class="hit-area">
+			<div class="focus-area">
+				<div class="focus"></div>
+			</div>
+		</div>
+		<div class="energy-items">
+			<div class="moving positive"></div>
+			<div class="moving negative"></div>
+			<div class="moving positive"></div>
+			<div class="moving negative"></div>
+			<div class="moving positive" ></div>
+			<div class="moving negative"></div>
+		</div>
+
+
+
 	</div>
 	<div>
 		<button ng-click="vm.setSpeed(1)">30</button>

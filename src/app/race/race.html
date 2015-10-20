@@ -1,4 +1,15 @@
 <div class="container">
+	<div class="game-controller">
+		<div class="energy-items">
+			<div class="moving positive"></div>
+			<div class="moving negative"></div>
+			<div class="moving positive"></div>
+			<div class="moving negative"></div>
+			<div class="moving positive" ></div>
+			<div class="moving negative"></div>
+		</div>
+		
+	</div>
 	<div class="game-container">
 		<div class="predefined-games" ng-show="race.state=='PREDEFINED_RACE_SELECTION'">
 			<div class="race-selection"  ng-repeat="(raceName,raceData) in race.races" ng-click="race.selectRace(raceName)">{{raceName}}</div>

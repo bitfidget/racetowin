@@ -1,29 +1,29 @@
 .game-area{
-	border: 4px solid green;
+	border: 6px solid white;
 	position: relative;
 }
 
 .position-overview{
-	border: 1px solid white;
-	background-color: rgba(255, 255, 255, .3);
 	min-height: 30px;
 	position: absolute;
 	z-index: 4000;
 	width:100%;
+	padding: 6px;
 
 	.track{
-		border: 2px solid grey;
+		border: 1px solid rgba(255,255,255,0.6);
+		background-color: rgba(255,255,255,0.1);
 		border-radius: 15px;
-		height:36px;
+		height:20px;
 		position: relative;
 		overflow: hidden;
 		.track-horse{
-			height: 30px;
-			width: 30px;
+			height: 16px;
+			width: 16px;
 			margin-left: -30px;
-			border-radius: 15px;
-			background-color: rgba(255, 0, 0, .5);
-			border: 1px solid rgba(255, 0, 0, .8);
+			border-radius: 50%;
+			background-color: rgba(255, 255, 255, .1);
+			border: 1px solid rgba(255, 255, 255, .6);
 			position: absolute;
 			top: 1px;
 			left:0%;
@@ -74,13 +74,115 @@
 .game-start .messages{
 	display: none;
 }
-
 .game-controller{
-	border: 1px dotted blue;
-	.whip{
-		background-color: rgba(0, 255, 0, .4);
-		width: 100px;
-		height: 100px;
+
+	position: absolute;
+	z-index: 7000;
+	width: 500px;
+
+	height: 180px;
+	padding: 5px;
+	overflow: hidden;
+	bottom: 70px;
+	// .whip{
+	// 	background-color: rgba(0, 255, 0, .4);
+	// 	width: 100px;
+	// 	height: 100px;
+	// 	border-radius: 50%;
+	// }
+
+	.hit-area{
+		background-color: rgba(255,255,255,.3);
+		width: 140px;
+		height: 140px;
+		border-radius:50%;
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+
+
+
+		.focus-area{
+			position: absolute;
+			width: 90px;
+			height: 90px;
+			border-radius: 50%;
+			left: 18%;
+			top: 18%;
+			background-color: rgba(255,255,255,.3);
+			.focus{
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				left: 25%;
+				top: 25%;
+				background-color: rgba(255,255,255,.3);
+			}
+		}
+	}
+
+	// .energy-items{
+	// 	top: 100px;
+	// 	position: absolute;
+	// 	left
+	// }
+
+	.moving{
+		border:0px;
+		padding: 0;
+		background-color: rgba(255,255,255,.0);
+		width: 50px;
+		height: 50px;
 		border-radius: 50%;
+		left: -10%;
+		top:65px;
+		position: absolute;
+		animation: energy 3s infinite;
+		animation-timing-function: linear;
+		&:nth-child(1n){
+			animation: energy 7s infinite 1.5s;
+		}
+		&:nth-child(2n){
+			animation: energy 8.2s infinite 1.8s;
+		}
+		&:nth-child(3n){
+			animation: energy 6.5s infinite 3s;
+		}
+		&:nth-child(4){
+			animation: energy 7.5s infinite 3.8s;
+		}
+		&:nth-child(5){
+			animation: energy 8.5s infinite 4.8s;
+		}
+		&:nth-child(6){
+			animation: energy 5.5s infinite 5.8s;
+		}
+	}
+
+	.negative{
+
+		background-size: 90%;
+    	background-repeat: no-repeat;
+    	background-position: 2px,1px;
+		background-image: url(../assets/images/negative_icon.png);
+	}
+
+	.positive{
+
+		background-size: 90%;
+    	background-repeat: no-repeat;
+    	background-position: 2px,1px;
+		background-image: url(../assets/images/positive_icon.png);
 	}
 }
+
+@keyframes energy {
+  0%   { left: -30%; }
+  100% { left: 140%; }
+}
+//
+// @keyframes energy {
+//   0%   { transform: translateX(-10%); }
+//   100% { transform: translateX(110%); }
+// }
