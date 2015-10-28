@@ -1,10 +1,8 @@
-<h1 class="p20 centered first">Australia’s next top horsey </h1>
-
 <div class="container methods">
-	
+	<h1 class="centered first">Australia’s next top horsey </h1>	
 	<p ng-if="methodSelect.index == 0">We have produced analysis around the Melbourne Cup for three years now and we are pulling together our fourth attempt at predicting the winner! As you are all aware, the Melbourne Cup is a particularly tricky one to predict as it is a race of champions with each horse being a star in its own right. This year on the modelling side we bring you analysis based on a variety of modelling techniques from across the team.</p>
 
-	<select name="methodOptions" id="methodOptions" ng-model="methodSelect" ng-options="method as method.name for method in methods"></select>
+	<select name="methodOptions" id="methodOptions" ng-model="methodSelect" ng-options="method as method.name for method in methods" class="btn btn-select m20 p20"></select>
 
 	<div ng-if="methodSelect.index == 0">
 		<h2>Explanation</h2>
@@ -17,14 +15,15 @@
 
 	<div ng-if="methodSelect.index != 0" class="prediction">
     <div class="p10 clearfix">
-      <div class="css-cell w20 text-center clearfix" ng-repeat="i in [0,1,2,3,4]">
-          <span class="horse-number">{{i + 1}}</span>
-          <div class="horse-gif " style="padding-top: {{barSize(methodSelect.odds[i])}}px;" id="horse{{i + 1}}">
+    	<div class="css-cell w20 text-center clearfix" ng-repeat="i in [0,1,2,3,4]" id="horse{{i + 1}}">
+        <span class="horse-number">{{i + 1}}</span>
+        <div class="horse-gif-holder">
+          <div class="horse-gif " style="margin-top: {{barSize(methodSelect.odds[i])}}px; height: {{barHeight(methodSelect.odds[i])}}px" >
               <img src="/assets/images/horsie-run-white.gif" alt="running horse">
               <span>${{methodSelect.odds[i]}}</span>
           </div>
-          <h4>{{methodSelect.horse[i]}}</h4>
-      </div>
+        </div>
+        <h4>{{methodSelect.horse[i]}}</h4>
     </div>
 	</div>
 

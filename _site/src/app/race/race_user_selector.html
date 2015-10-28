@@ -1,0 +1,30 @@
+<div class="container">
+	<h3>User Selection Room: {{userSelection.selectedRaceRoom}}</h3>
+</div>
+
+<div class="container" ng-hide="userSelection.selectedHorse">
+	<div class="col-sm-12 horse-selection" ng-click="userSelection.selectHorse(horseName)" ng-repeat="(horseName,horse) in userSelection.raceRoomsData.horses"> <span class="glyphicon glyphicon-knight" style="color:{{horse.color}}" aria-hidden="true"></span> Speed: {{horse.speed}}</div>
+</div>
+<div class="container" ng-show="userSelection.selectedHorse">
+	<h2>{{userSelection.selectedHorse}}</h2>
+	<game room="userSelection.selectedRaceRoom" horse="userSelection.selectedHorse"></game>
+</div>
+
+<!-- <div class="container" >
+	<div class="row">
+		<h2>{{race.selectedRaceRoom}}</h2>
+	</div>
+	<div class="row">
+		<game room="race.selectedRaceRoom"></game>
+	</div>
+</div>
+
+<div class="container" >
+	<div class="row">
+	  <div class="col-sm-6 col-md-4" ng-repeat="(roomName,room) in race.raceRooms">
+	    <div class="thumbnail" ng-click="race.selectRace(roomName)" >
+			{{roomName}}
+	    </div>
+	  </div>
+	</div>
+</div> -->

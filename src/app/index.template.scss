@@ -23,11 +23,10 @@ a:visited,
 
 body{
 	font-family: $normal;
-	background: $Maroon;
-  color: #FFF;
+	background: #FFF;
+  color: #000;
   font-size: 13px;
   line-height: 18px;
-  overflow: hidden;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -60,6 +59,10 @@ div {
 
 .clickable{
 	cursor: pointer;
+}
+
+.container{
+	max-width: 100% !important;
 }
 
 .hidden{
@@ -96,7 +99,7 @@ div {
 	width: 100%;
 	text-align: center;
 	z-index: 1001;
-	background: $Maroon;
+	background: $Burgundy;
 	height: 60px;
 	color: #FFF;
 	line-height: 40px;
@@ -119,10 +122,7 @@ div {
 	font-size: 24px;
 }
 
-.container,
-.row{
-	max-width: 100% !important;
-}
+
 
 .css-table{
 	border-radius: 5px;
@@ -164,10 +164,11 @@ h1{
 	font-size: 24px;
 	font-weight: bold;
 	line-height: 100%;
+	text-align: center;
 }
 
 h1.first{
-	margin-top: 20px;
+	margin-top: 30px;
 }
 
 h2{
@@ -175,6 +176,7 @@ h2{
 	font-weight: bold;
 	line-height: 100%;
 	margin: 20px 0;
+	text-align: center;
 }
 
 h3{
@@ -182,11 +184,12 @@ h3{
 	font-weight: bold;
 	line-height: 100%;
 	margin: 20px 0;
+	text-align: center;
 }
 
 p{
 	font-family: $charter;
-	margin: 20px 0 35px;
+	margin: 10px 0px 15px;
   font-size: 14px;
   line-height: 1.6;
   font-weight: normal;
@@ -205,6 +208,35 @@ a.btn-secondary,
 .btn-secondary{
 	color: #FFF;
 	background: $Orange;
+}
+
+input{
+	color: #000;
+}
+
+form{
+	margin: 30px 0;
+}
+
+form input{
+	margin: 20px 0;
+}
+
+.btn-select{
+	width: 90%;
+	display: block;
+	padding: 20px;
+	margin: 20px 5%;
+	background: $Burgundy;
+	color: #FFF;
+}
+
+.btn-select option{
+	padding: 20px;
+}
+
+.btn-select:hover{
+	color: #FFF;
 }
 
 #blurb-home{

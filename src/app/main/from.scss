@@ -1,0 +1,34 @@
+.form-container{
+	border-radius: 5px;
+	background: lighten($Burgundy, 60%);
+	margin: 15px;
+	margin-top: 20px;
+}
+
+.form-list.odd{
+	background: lighten($Burgundy, 50%);
+}
+
+.form-list.even{
+	background: lighten($Burgundy, 60%);
+}
+
+.form-list h2,
+.form-list h4{
+	margin: 0;
+	text-align: left;
+}
+
+.form-list .col-xs-2,
+.form-list .col-xs-6,
+.form-list .col-xs-5,
+.form-list .col-xs-3,
+.form-list .col-xs-12,
+.form-list .col-xs-4{
+	padding: 10px;
+}
+
+.form-header{
+	background: $Burgundy;
+	color: #FFF;
+}

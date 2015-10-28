@@ -6,7 +6,7 @@
     .controller('SpuriousCorrelationsController', SpuriousCorrelationsController);
 
   /** @ngInject */
-  function SpuriousCorrelationsController($scope) {
+  function SpuriousCorrelationsController($scope, $rootScope) {
     var vm = this;
 
     vm.name = "Melbourne Cup 2015"
@@ -30,8 +30,12 @@
 
     $scope.correlations = [
     	{
+				name : 'Please select...',
+				index: 0
+			},
+    	{
 				name : 'Pork consumed & Horse carry weight',
-				index: 0,
+				index: 1,
 				score: 79,
 				data1 : 
 					[{
@@ -48,7 +52,7 @@
 			},
 			{
 				name : 'Unemployment Rate & Field size',
-				index: 1,
+				index: 2,
 				score: 77,
 				data1 : 
 					[{
@@ -66,7 +70,7 @@
 			},
 			{
 				name : 'Current Account Balance & Cup Attendance',
-				index: 2,
+				index: 3,
 				score: 73,
 				data1 : 
 					[{
@@ -84,7 +88,7 @@
 			},
 			{
 				name : 'Total spirits consumed & Characters in winners name',
-				index: 3,
+				index: 4,
 				score: -80,
 				data1 : 
 					[{

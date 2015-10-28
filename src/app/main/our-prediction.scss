@@ -2,10 +2,8 @@
     max-width: 100px;
     width: 100%;
     display: block;
-    height: 236px;
     background-size: 100%;
     text-align: center;
-    font-weight: bold;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
@@ -13,39 +11,44 @@
     span {
         width: 100%;
         display: block;
-        font-size: 2em;
-        height: 250px;
-        background: #FFF;
+        font-size: 1.4em;
     }
 }
 .zero-height {
     padding-top: 200px !important;
 }
-.horse-gif#horse1 {
-    color: $Burgundy;
+
+#horse1 .horse-gif {
+    background: $Burgundy;
 }
-.horse-gif#horse2 {
-    color: $Red;
+#horse2 .horse-gif{
+    background: $Red;
 }
-.horse-gif#horse3 {
-    color: $Rose;
+#horse3 .horse-gif {
+    background: $Tangerine;
 }
-.horse-gif#horse4 {
-    color: $Rose;
+#horse4 .horse-gif {
+    background: $Rose;
 }
-.horse-gif#horse5 {
-    color: $Orange;
+#horse5 .horse-gif {
+    background: $Orange;
 }
+
+.horse-gif-holder{
+    max-height: 236px;
+    min-height: 236px;
+    overflow: hidden;
+}
+
 .horse-number {
     display: block;
-    color: #FFF;
-    font-size: 1.8em;
+    color: #000;
+    font-size: 1em;
     margin: auto;
-    background: #FFF;
-    background: rgba(0,0,0,0.5);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+}
+
+.horse-gif span{
+    color: #FFF;
 }
 
 .w20{
@@ -55,7 +58,6 @@
 .prediction{
     font-family: $charter;
 }
-
  
 .prediction h4 {
     display: inline-block;
@@ -68,7 +70,6 @@
     overflow: hidden;
     font-family: $normal;
     font-style: normal;
-
 }
  
 .prediction h4:before {
@@ -81,4 +82,42 @@
    content: "";
    width: 100%;
    display: inline-block;
+}
+
+
+
+.horsey-panel{
+    background: url(/assets/images/bg-horsey-panel.png) top no-repeat;
+    background-size: 100%;
+    padding-top: 50%;
+}
+
+.horsey-panel h3{
+    margin: 10px auto;
+}
+
+.horsey-panel .inner{
+    background: $DarkGrey;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 10px;
+}
+
+.panelist{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.panelist-1{
+    background: $Burgundy;
+    color: #FFF;
+}
+.panelist-2{
+    background: $Yellow;
+}
+.panelist-3{
+    background: $Orange;
+    color: #FFF;
 }

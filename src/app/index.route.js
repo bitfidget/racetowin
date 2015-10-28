@@ -14,7 +14,7 @@
       })
       .when('/our-prediction', {
         templateUrl: 'app/main/our-prediction.html',
-        controller: 'MainController',
+        controller: 'PredictionController',
         controllerAs: 'main'
       })
       .when('/our-geeks-pick', {
@@ -29,13 +29,18 @@
       })
       .when('/social', {
         templateUrl: 'app/main/social.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        controller: 'SocialController',
+        controllerAs: 'sc'
       })
       .when('/the-form', {
         templateUrl: 'app/main/the-form.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        controller: 'FormController',
+        controllerAs: 'form'
+      })
+      .when('/your-horsey-name', {
+        templateUrl: 'app/main/your-horsey-name.html',
+        controller: 'NameController',
+        controllerAs: 'name'
       })
       .when('/credits', {
         templateUrl: 'app/main/credits.html',
@@ -64,7 +69,7 @@
       })
       .otherwise({
         redirectTo: '/'
-      });
+      })
   }
 
 })();
