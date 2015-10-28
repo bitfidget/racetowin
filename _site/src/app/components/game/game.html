@@ -1,0 +1,21 @@
+<button type="button" name="button" ng-click="vm.joinRace()">Join Race</button>
+<div class="game-area">
+	<div class="position-overview">
+		<div class="track">
+			<div class="track-horse" style="left:{{horse.distance}}%;background-color:{{horse.color}}" ng-repeat="horse in vm.horses()">{{horse.speed}}</div>
+		</div>
+	</div>
+	<game-canvas></game-canvas>
+
+	<div class="game-controller">
+		<div class="whip" style="background-color:blue" ng-click="vm.startTest()">Start Test</div>
+	</div>
+	<div>
+		<button ng-click="vm.setSpeed(1)">30</button>
+		<button ng-click="vm.setSpeed(1.2)">40</button>
+		<button ng-click="vm.setSpeed(1.4)">50</button>
+		<button ng-click="vm.setSpeed(1.6)">60</button>
+		<button ng-click="vm.setSpeed(1.8)">70</button>
+	</div>
+
+</div>

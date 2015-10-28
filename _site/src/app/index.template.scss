@@ -1,0 +1,224 @@
+/* mobile only display for now */
+
+$normal: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$charter: "ITC Charter","Georgia",serif;
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+.btn:hover,
+.btn:visited{
+	color: #FFF;
+	text-decoration: none;
+	border: none;
+	box-shadow: none;
+}
+
+body{
+	font-family: $normal;
+	background: $Maroon;
+  color: #FFF;
+  font-size: 13px;
+  line-height: 18px;
+  overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $charter;
+	font-weight: 800;
+	letter-spacing: 1px;
+	font-style: italic;
+}
+
+p, ol, ul, td {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+img{
+	max-width: 100%;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+.clickable{
+	cursor: pointer;
+}
+
+.hidden{
+	display: none;
+}
+
+.main-column{
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+#wrapper{
+	display: block;
+	padding-top: 60px;
+}
+
+#footer{
+	font-size: 11px;
+	background: $DarkGrey;
+	color: #FFF;
+	width: 100%;
+	margin: 0 auto;
+	p{
+		margin: 10px 0;
+	}
+}
+
+#header{
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 1001;
+	background: $Maroon;
+	height: 60px;
+	color: #FFF;
+	line-height: 40px;
+	box-shadow: 0 2px 2px -2px lighten(#000, 5%);
+}
+
+#header .main-column{
+	padding: 0 60px;
+}
+
+#header h1{
+	font-size: 18px;
+	margin: 10px auto;
+	color: #FFF;
+	line-height: 40px;
+}
+
+#header .btn{
+	padding: 15px;
+	font-size: 24px;
+}
+
+.container,
+.row{
+	max-width: 100% !important;
+}
+
+.css-table{
+	border-radius: 5px;
+}
+
+.css-row{
+}
+
+.css-cell{
+	float: left;
+	display: block;
+	padding: 5px;
+}
+
+.btn-panel{
+	border-top: solid 1px #FFF;
+	border-bottom: solid 1px darken($LightGrey, 5%);	
+	border-left: solid 1px #FFF;
+	border-right: solid 1px darken($LightGrey, 5%);
+	background: lighten($LightGrey, 5%);
+}
+
+.profile,
+.races{
+	display: block;
+	background: #FFF;
+	margin: 50px 0 0 0;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.profile img,
+.races img{
+	width: 40%;
+	margin: -20px auto -10px;
+}
+
+h1{
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 100%;
+}
+
+h1.first{
+	margin-top: 20px;
+}
+
+h2{
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 100%;
+	margin: 20px 0;
+}
+
+h3{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 100%;
+	margin: 20px 0;
+}
+
+p{
+	font-family: $charter;
+	margin: 20px 0 35px;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+a.btn-primary,
+.btn-primary{
+	color: #FFF;
+	background: $Burgundy;
+	border: none;
+}
+
+a.btn-secondary,
+.btn-secondary{
+	color: #FFF;
+	background: $Orange;
+}
+
+#blurb-home{
+	position: fixed;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	color: $Maroon;
+}
+
+#warning-home{
+	position: fixed;
+	bottom: 10px;
+	left: 0;
+	width: 100%;
+	color: #FFF;
+}

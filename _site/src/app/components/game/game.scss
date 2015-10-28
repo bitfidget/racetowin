@@ -1,0 +1,42 @@
+.game-area{
+	border: 1px solid green;
+}
+
+.position-overview{
+	border: 1px solid red;
+	min-height: 30px;
+	.track{
+		border: 2px solid grey;
+		border-radius: 15px;
+		height:36px;
+		position: relative;
+		overflow: hidden;
+		.track-horse{
+			height: 30px;
+			width: 30px;
+			margin-left: -30px;
+			border-radius: 15px;
+			background-color: rgba(255, 0, 0, .5);
+			border: 1px solid rgba(255, 0, 0, .8);
+			position: absolute;
+			top: 1px;
+			left:0%;
+			transition: left 1s;
+			transition-timing-function: linear;
+
+		}
+	}
+
+
+}
+
+.game-controller{
+	border: 1px dotted blue;
+	.whip{
+		border: 1px solid rgba(0, 255, 0, .6);
+		background-color: rgba(0, 255, 0, .4);
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+	}
+}

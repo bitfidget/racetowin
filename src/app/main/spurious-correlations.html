@@ -1,45 +1,28 @@
-<h1 class="p20 centered first">Spur-rious Horsey Correlations</h1>
+<div class="container correlations" style="min-height: {{contHeight}}px">
+  <h1 class="first">Spur-rious Horsey Correlations</h1>
 
-<div class="container correlations">
+  <div ng-if="correlationSelect.index == 0">
+  	<p>Whilst correlations can be useful when applied with an appropriate level of understanding, they can be harmful if misinterpreted... correlation is not causation!</p>
+    <p>To illustrate what we mean, using our in-house correlation engine, we have uncovered a few coincidental relationships between horsey data and Australian commodities.</p>
+	</div>
 	
-	<p>Using our in-house correlation engine, we have discovered a few interesting relationships that you should definitely know about.</p>
-	<p>Please use the drop-down to explore...</p>
-	<select name="correlationOptions" id="correlationOptions" ng-model="correlationSelect" ng-options="correlation as correlation.name for correlation in correlations"></select>
+  <select name="correlationOptions" id="correlationOptions" ng-model="correlationSelect" ng-options="correlation as correlation.name for correlation in correlations" class="btn btn-select"></select>
 
-	<h2 class="text-center">{{correlationSelect.data1[0].key}}<br>correlates to<br> {{correlationSelect.data2[0].key}}<br>with a score of {{correlationSelect.score}}%</h2>
-
-	<div ng-if="correlationSelect.index == 0">
-		<p>With Australians packing on the porky pounds over the last 5 years, it's no surprise that the winning horse has had to do more work carrying those chubby cherubs across the line.</p>
-		<p>Although racing authorities set the weights for race day, the saddle can only weigh so little.</p>
-		<p>Statistical analysis has also shown that highly weighted horses actually have higher chances of winning, which may actually be a sneaky strategy of bacon lovers around the country.</p>
-	</div>
-
-	<div ng-if="correlationSelect.index == 1">
-	</div>
-
-	<div ng-if="correlationSelect.index == 2">
-	</div>
-
-	<div ng-if="correlationSelect.index == 3">
-		<p>Intuition and experience suggests that that spirit consumption is positively tied to the number of words we speak, and thus the length of a horse's name.</p>
-		<p>However our analysts have found that indeed the opposite is true. Why is this?</p>
-		<p>We have consulted experts of the field for comment.</p>
-		<p>Although people are more verbose after some spirits, they're also more daring. As you would think people become more verbose with more drinks and braver with alcohol so the horse with shortest name never wins</p>
-	</div>
+	<h2 class="text-center" ng-if="correlationSelect.index != 0">Correlation score of {{correlationSelect.score}}%</h2>
 
 	<div id="charts">
-
     <nvd3-line-chart
       data="correlationSelect.data2"
       id="left"
-      height="500"
+      height="300"
       showXAxis="true"
       showYAxis="true"
-      margin="{left:45,top:15,bottom:35,right:15}"
+      margin="{left:80,top:15,bottom:35,right:80}"
       tooltips="true"
       isArea="true"
       yaxislabel="{{correlationSelect.data2[0].key}}"
-      forceY="minMax(correlationSelect.data2[0].values)"     
+      forceY="minMax(correlationSelect.data2[0].values)" 
+      yaxislabeldistance="0"    
       >
       <svg></svg>
     </nvd3-line-chart>
@@ -47,11 +30,10 @@
     <nvd3-line-chart
       data="correlationSelect.data1"
       id="right"
-      height="500"
+      height="300"
       showXAxis="false"
       showYAxis="true"
-      yaxislabel="fucking label"
-      margin="{left:45,top:15,bottom:35,right:15}"
+      margin="{left:80,top:15,bottom:35,right:80}"
       tooltips="true"
       yaxislabeldistance="0"
       isArea="true"
@@ -61,7 +43,25 @@
       >
       <svg></svg>
     </nvd3-line-chart>
+  </div>
 
-    </div>
+  <div ng-if="correlationSelect.index == 1">
+    <p>With Australians packing on the porky pounds over the last 5 years, it's no surprise that the winning horse has had to do more work carrying those chubby cherubs across the line.</p>
+    <p>Although racing authorities set the weights for race day, the saddle can only weigh so little.</p>
+    <p>Statistical analysis has also shown that highly weighted horses actually have higher chances of winning, which may actually be a sneaky strategy of bacon lovers around the country.</p>
+  </div>
+
+  <div ng-if="correlationSelect.index == 2">
+  </div>
+
+  <div ng-if="correlationSelect.index == 3">
+  </div>
+
+  <div ng-if="correlationSelect.index == 4">
+    <p>Intuition and experience suggests that that spirit consumption is positively tied to the number of words we speak, and thus the length of a horse's name.</p>
+    <p>However our analysts have found that indeed the opposite is true. Why is this?</p>
+    <p>We have consulted experts of the field for comment.</p>
+    <p>Although people are more verbose after some spirits, they're also more daring. As you would think people become more verbose with more drinks and braver with alcohol so the horse with shortest name never wins</p>
+  </div>
 
 </div>

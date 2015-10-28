@@ -1,3 +1,39 @@
-<h1 class="p20 centered">2015 Form</h1>
+<div class="container form" style="min-height: {{contHeight}}px">
+    <h1 class="first">This years form</h1>
 
-<p class="p20 centered">form guide to be supplied</p>
+    <div class="form-container">
+        <div class="row form-header">
+            <div class="col-xs-5">
+                name/no./weight
+            </div>
+            <div class="col-xs-3">
+                our pick
+            </div>
+            <div class="col-xs-3">
+                no.
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+        <div class="row form-list" ng-repeat="horse in horses track by $index" ng-class-odd="'odd'" ng-class-even="'even'">
+            <div class="clickable">
+                <div class="col-xs-5">
+                    <h2>{{horse.name}} ({{horse.number}})</h2>
+                    <h4>{{horse.weight}}kg</h4>
+                </div>
+                <div class="col-xs-3">{{horse.tip}}</div>
+                <div class="col-xs-3">{{horse.ref}}</div>
+                <div class="col-xs-1" ng-show="!horse.show" ng-click="horse.show = !horse.show">+</div>
+                <div class="col-xs-1" ng-show="horse.show" ng-click="horse.show = !horse.show">-</div>
+            </div>
+            <div class="expanded" ng-show="horse.show">
+                <div class="col-xs-12">{{horse.age}}y/o {{horse.nationality}}</div>
+                <div class="col-xs-4">Wins %</div>
+                <div class="col-xs-2">{{horse.wins}}</div>            
+                <div class="col-xs-4">Place %</div>
+                <div class="col-xs-2">{{horse.place}}</div>            
+                <div class="col-xs-6">Preferred track</div>
+                <div class="col-xs-6">{{horse.track}}</div>
+            </div>
+        </div>
+    </div>
+</div>

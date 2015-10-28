@@ -1,22 +1,27 @@
-/*#hamburger-container{
+#hamburger-container{
 	display: block;
-	width: 100%;
-	height: auto;
-	min-height: 100%;
-	position: absolute;
+	width: 0px;
+	height: 100%;
+	position: fixed;
 	overflow: hidden;
 	background: none;
-	z-index: 0;
-}*/
+	z-index: -10;
+	top: 0;
+	right: 0;
+	transition: width ease .5s;
+}
+
+#hamburger-container.active{
+	width: 100%;
+}
 
 #hamburger{
 	display: block;
-	padding-top: 60px;
+	top: 60px;
 	width: 100%;
 	height: auto;
 	min-height: 100%;
 	position: absolute;
-	top: 0;
 	left: 100%;
 	color: #FFF;
 	background: rgba($DarkGrey, 0.9);
@@ -24,19 +29,33 @@
 	font-size: 22px;
 	transition: left ease .5s;
 	z-index: 1001;
+	text-align: left;
 }
 
-#hamburger.active{
+.active #hamburger{
 	left: 0;
 }
 
 #wrapper{
-	overflow: hidden;
+
 }
 
 ul li{
-	padding: 20px;
 	border-top: solid 1px rgba($DarkGrey, 0.5);
 	border-bottom: solid 1px rgba(#FFF, 0.1);
 }
 
+#hamburger a,
+#hamburger a:hover{
+	display: block;
+	width: 100%;
+	color: #FFF;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 20px;
+	transition: background ease .2s;
+}
+
+#hamburger a:hover{
+	background: $DarkGrey;
+}
