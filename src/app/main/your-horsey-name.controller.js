@@ -277,6 +277,10 @@
     }
 
     $scope.assignName = function() {
+        if ($scope.realName.toLowerCase() == 'al pearson') {
+            $scope.finalName = 'Stood on a box';
+            return;
+        }
     	var splitName = $scope.realName.toLowerCase().split('');
         var nameTotal = 0;
     	$.each(splitName, function(i,v) {

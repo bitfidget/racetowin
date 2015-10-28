@@ -29,6 +29,11 @@ body{
   line-height: 18px;
 }
 
+body{
+	background: url(/assets/svg/bg-home.svg) center no-repeat;
+	background-size: cover;
+}
+
 h1,h2,h3,h4,h5,h6{
 	font-family: $charter;
 	font-weight: 800;
@@ -80,7 +85,22 @@ div {
 	padding-top: 60px;
 }
 
+#home{
+	min-height: 900px !important;
+}
+
 #footer{
+	.text-center{
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 20px;
+	}
+	a{
+		color: $Yellow;
+	}
+	.footlinks a{
+		padding: 20px 10px;
+	}
 	font-size: 11px;
 	background: $DarkGrey;
 	color: #FFF;

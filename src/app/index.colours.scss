@@ -31,8 +31,12 @@ $LightGrey: #EFEFEF;
 
 /* backgournd images */
 
+.container{
+	background: rgba(255,255,255,1);
+}
+
 .container#home{
-	background: #579546 url(../assets/svg/home-image.svg) center no-repeat;
+	background: url(/assets/svg/bg-home-over.svg) no-repeat;
 	background-size: cover;
 	color: $Maroon;
 }
