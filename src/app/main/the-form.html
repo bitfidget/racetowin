@@ -4,13 +4,13 @@
     <div class="form-container">
         <div class="row form-header">
             <div class="col-xs-5">
-                name/number/weight
+                name/no./weight
             </div>
             <div class="col-xs-3">
-                our tips
+                our pick
             </div>
             <div class="col-xs-3">
-                some number
+                no.
             </div>
             <div class="col-xs-1"></div>
         </div>
@@ -22,8 +22,8 @@
                 </div>
                 <div class="col-xs-3">{{horse.tip}}</div>
                 <div class="col-xs-3">{{horse.ref}}</div>
-                <div class="col-xs-1" ng-show="!horse.show" ng-click="horse.show = !horse.show">more</div>
-                <div class="col-xs-1" ng-show="horse.show" ng-click="horse.show = !horse.show">less</div>
+                <div class="col-xs-1" ng-show="!horse.show" ng-click="horse.show = !horse.show">+</div>
+                <div class="col-xs-1" ng-show="horse.show" ng-click="horse.show = !horse.show">-</div>
             </div>
             <div class="expanded" ng-show="horse.show">
                 <div class="col-xs-12">{{horse.age}}y/o {{horse.nationality}}</div>
