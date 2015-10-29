@@ -6,29 +6,47 @@
 }
 
 .form-list.odd{
-	background: lighten($Burgundy, 50%);
+	background: lighten($DarkGrey, 71%);
 }
 
 .form-list.even{
-	background: lighten($Burgundy, 60%);
+	background: lighten($DarkGrey, 73%);
 }
 
 .form-list h2,
 .form-list h4{
 	margin: 0;
 	text-align: left;
+	color: $Orange;
 }
 
-.form-list .col-xs-2,
-.form-list .col-xs-6,
-.form-list .col-xs-5,
-.form-list .col-xs-3,
-.form-list .col-xs-12,
-.form-list .col-xs-4{
-	padding: 10px;
+.form-list h2{
+	line-height: 48px;
 }
+
+
 
 .form-header{
 	background: $Burgundy;
 	color: #FFF;
+}
+
+.horse-number-f{
+	display: block;
+	margin-right: 20px;
+	background: $Orange;
+	width: 48px;
+	height: 48px;
+	text-align: center;
+	color: #FFF;
+	font-size: 30px;
+	border-radius: 50%;
+	font-family: $charter;
+	line-height: 42px;
+}
+
+.horse-overview{
+	margin: 0;
+	font-family: $charter;
+	padding: 15px 0;
 }

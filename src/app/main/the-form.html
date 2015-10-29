@@ -1,39 +1,47 @@
 <div class="container form" style="min-height: {{contHeight}}px">
     <h1 class="first">This years form</h1>
-
     <div class="form-container">
-        <div class="row form-header">
-            <div class="col-xs-5">
-                name/no./weight
-            </div>
-            <div class="col-xs-3">
-                our pick
-            </div>
-            <div class="col-xs-3">
-                no.
-            </div>
-            <div class="col-xs-1"></div>
-        </div>
         <div class="row form-list" ng-repeat="horse in horses track by $index" ng-class-odd="'odd'" ng-class-even="'even'">
-            <div class="clickable">
-                <div class="col-xs-5">
-                    <h2>{{horse.name}} ({{horse.number}})</h2>
-                    <h4>{{horse.weight}}kg</h4>
+            <div class="clickable" ng-click="horse.show = !horse.show">
+                <div class="row horse-overview">
+                    <div class="col-xs-6">
+                        <div class="horse-number-f pull-left">{{horse.number}}</div>
+                        <h2>{{horse.name}}</h2>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="row text-right">
+                            weight: <br>
+                            previous:
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        {{horse.weight}}kg<br>
+                        {{horse.previous}}
+                    </div>
+                    <div class="col-xs-1 text-right"><i class="glyphicon glyphicon-plus-sign"  ng-show="!horse.show"></i>
+                    <i class="glyphicon glyphicon-minus-sign" ng-show="horse.show"></i></div>
+
+                    
+                    
+
+                    <div class="expanded p20" ng-show="horse.show">
+                        <div class="row">
+                            <div class="col-xs-2 text-right">age: </div>
+                            <div class="col-xs-2">{{horse.age}} years</div>
+                            <div class="col-xs-2 text-right">wins (%): </div>
+                            <div class="col-xs-2">{{horse.wins}} years</div>
+                            <div class="col-xs-2 text-right">place (%): </div>
+                            <div class="col-xs-2">{{horse.place}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2 text-right">nationality: </div>
+                            <div class="col-xs-2">{{horse.nationality}}</div>
+                            <div class="col-xs-2 text-right">track: </div>
+                            <div class="col-xs-2">{{horse.track}}</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xs-3">{{horse.tip}}</div>
-                <div class="col-xs-3">{{horse.ref}}</div>
-                <div class="col-xs-1" ng-show="!horse.show" ng-click="horse.show = !horse.show">+</div>
-                <div class="col-xs-1" ng-show="horse.show" ng-click="horse.show = !horse.show">-</div>
-            </div>
-            <div class="expanded" ng-show="horse.show">
-                <div class="col-xs-12">{{horse.age}}y/o {{horse.nationality}}</div>
-                <div class="col-xs-4">Wins %</div>
-                <div class="col-xs-2">{{horse.wins}}</div>            
-                <div class="col-xs-4">Place %</div>
-                <div class="col-xs-2">{{horse.place}}</div>            
-                <div class="col-xs-6">Preferred track</div>
-                <div class="col-xs-6">{{horse.track}}</div>
-            </div>
+            </div>   
         </div>
     </div>
 </div>

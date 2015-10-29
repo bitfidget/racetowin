@@ -43,7 +43,7 @@
     		horse : ['awesome','grumpy dumpling','i will win','horse racing is mean','five'],
     		odds : [13,15,16,27,13]
 		}
-	  ]
+	]
 
     $scope.methodSelect = $scope.methods[0];
 
