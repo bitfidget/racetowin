@@ -13,30 +13,17 @@
 
     $scope.horses = [
     	{
-    		name: "Binky",
-    		number: 12,
-    		weight: 45,
-    		tip: 0,
-    		previous: '1 - 4',
+    		name: "Horse 1",
+    		number: 1,
+    		weight: 1,
+    		tip: 1,
+    		previous: '1 1 1',
     		more: false,
-    		age: 6,
-    		nationality: 'irish',
-    		wins: 45,
-    		place: 67,
+    		age: 1,
+    		nationality: 'One',
+    		wins: 1,
+    		place: 1,
     		track: 1,
-    	},
-    	{
-    		name: "Blinky",
-    		number: 11,
-    		weight: 35,
-    		tip: 2,
-    		previous: '2 3 1',
-    		more: false,
-    		age: 6,
-    		nationality: 'greek',
-    		wins: 45,
-    		place: 67,
-    		track: 3,
     	}
     ]
 

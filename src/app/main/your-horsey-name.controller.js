@@ -284,7 +284,16 @@
         if ($scope.realName.toLowerCase() == 'caroline fazzolari') {
             $scope.finalName = 'Fun police';
             return;
+        };        
+        if ($scope.realName.toLowerCase() == 'john studley') {
+            $scope.finalName = 'The StudMeister';
+            return;
+        };        
+        if ($scope.realName.toLowerCase() == 'stuart shinfield') {
+            $scope.finalName = 'Mad as a hatter';
+            return;
         };
+
     	var splitName = $scope.realName.toLowerCase().split('');
         var nameTotal = 0;
     	$.each(splitName, function(i,v) {
@@ -312,8 +321,8 @@
         'Yee hah!',
         'Yeah!',
         'Winner!',
-        'oh yeah!',
-        'woah nellie!'
+        'Oh yeah!',
+        'Woah nellie!'
     ];
 
     $scope.randSpur = function() {

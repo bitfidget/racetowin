@@ -12,7 +12,7 @@
 
 	<div id="charts">
     <nvd3-line-chart
-      data="correlationSelect.data2"
+      data="correlationSelect.data1"
       id="left"
       height="300"
       showXAxis="true"
@@ -20,15 +20,15 @@
       margin="{left:80,top:15,bottom:35,right:80}"
       tooltips="true"
       isArea="true"
-      yaxislabel="{{correlationSelect.data2[0].key}}"
-      forceY="minMax(correlationSelect.data2[0].values)" 
+      yaxislabel="{{correlationSelect.data1[0].key}}"
+      forceY="minMax(correlationSelect.data1[0].values)" 
       yaxislabeldistance="0"    
       >
       <svg></svg>
     </nvd3-line-chart>
 
     <nvd3-line-chart
-      data="correlationSelect.data1"
+      data="correlationSelect.data2"
       id="right"
       height="300"
       showXAxis="false"
@@ -38,8 +38,8 @@
       yaxislabeldistance="0"
       isArea="true"
       rightAlignYAxis="true"
-      yaxislabel="{{correlationSelect.data1[0].key}}"
-      forceY="minMax(correlationSelect.data1[0].values)"
+      yaxislabel="{{correlationSelect.data2[0].key}}"
+      forceY="minMax(correlationSelect.data2[0].values)"
       >
       <svg></svg>
     </nvd3-line-chart>

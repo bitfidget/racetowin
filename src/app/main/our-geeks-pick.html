@@ -1,16 +1,31 @@
 <div class="container methods" style="min-height: {{contHeight}}px">
-	<h1 class="centered first">Australia’s next top horsey </h1>	
+	<h1 ng-if="methodSelect.index == 0" class="centered first">Australia’s next top horsey </h1>
+	<h1 ng-if="methodSelect.index != 0" class="centered first">Our top 5 according to {{methodSelect.name}}</h2>
 	<p ng-if="methodSelect.index == 0">We have produced analysis around the Melbourne Cup for three years now and we are pulling together our fourth attempt at predicting the winner! As you are all aware, the Melbourne Cup is a particularly tricky one to predict as it is a race of champions with each horse being a star in its own right. This year on the modelling side we bring you analysis based on a variety of modelling techniques from across the team.</p>
 
 	<select name="methodOptions" id="methodOptions" ng-model="methodSelect" ng-options="method as method.name for method in methods" class="btn btn-select m20 p20"></select>
 
+	<div ng-if="methodSelect.index == 1">
+		<p>An old favourite of predictive modellers, these traditional methods use mathematical formulas to estimate either the finishing place (linear) of a horse or its chance of winning (logistic).  </p>
+		<p>It is the modelling technique of choice for many predictive problems.</p>
+	</div>
+
+	<div ng-if="methodSelect.index == 2">
+		<p>A new entrant to the Melbourne Cup predictive method pool, machine learning is a branch of artificial intelligence that has found its way into many fields, including fraud detection, financial markets analysis, and horse racing.</p>
+		<p>Algorithms, including decision trees and their ensemble counter-parts, use historical race results to ‘learn’ the complex relationship between a horse’s characteristics (weight, age, trainer etc.) and its most-likely finishing place or probability of winning.</p>
+	</div>
+
+	<div ng-if="methodSelect.index == 4">
+		<p>OK we admit it, there's no real mehod here, it's just pure flying by the seat of your pants luck, but generally it's the preferred method of the extremely infrequent gambler.</p>
+	</div>
+
 	<div ng-if="methodSelect.index == 0">
 		<h2>Explanation</h2>
-		<p>This year we threw the challenge of horsey prediction to our wider team who have used a range of modelling techniques to hunt down our top horses for 2015. Here we bring you the nitty gritty of what was done and the pros and cons of each approach.</p>
-		<p>The approaches we used this year include the tried-and-tested linear regression model, the new classification model via. machine learning, and a return of the ELO rating prediction model. However before starting the actual modelling we gathered a lot of data and expert input to hone in on what matters when it comes to picking winners.</p>
-		<p>First up, we used web scraping scripts to gather as much data as we could for over 50 thousand horses and over 1 million race results (race with 24 horses would have 24 race results). Xyz% of the race results were excluded as they did not have any prize money. Jockeys and trainers usually preserve their horses for the bigger races when there is financial incentive. Having such a big dataset allowed us to thoroughly test the model’s validity before including variables that we believed to be useful.</p>
-		<p>The next step was to understand the intersection of variables that matter (via. research and expert input) and variables we were able to collect information on. This intersection was made up of race odds, horse speed & form, weight carried, track condition preference of the horse, and barrier position in each race.</p>
-		<p>Armed with both the data and a hypothesis of what matters when it comes to predicting races the team set off from an even playing field to predict the top 5 placing horses.</p>
+		<p>This year we threw the challenge of horsey prediction to our wider team who have used a range of modelling techniques to hunt down our top horses for 2015. Here we bring you details on what was done and the pros and cons of each approach.</p>
+		<p>The approaches we used this year include the tried-and-tested linear regression model, a new machine learning model, and another more unique approach. However before starting the modelling we gathered a lot of data and expert input to hone in on what matters when it comes to picking winners.</p>
+		<p>First up, we used web scraping scripts to gather as much data as we could for over 50 thousand horses and over 1 million race results (race with 24 horses would have 24 race results). Having such a big dataset allowed us to thoroughly test the model’s validity before including variables that we believed to be useful.</p>
+		<p>The next step was to understand the intersection of variables that matter (via. research) and variables we were able to collect information on. This intersection was made up of race odds, horse speed & form, weight carried, track condition preference of the horse, and barrier position in each race.</p>
+		<p>Armed with both the data and a hypothesis of what matters when it comes to predicting races the team set off from an even playing field to predict the top performing horses.</p>
 	</div>
 
 	<div ng-if="methodSelect.index != 0" class="prediction">
@@ -28,42 +43,22 @@
 	</div>
 
 	<div ng-if="methodSelect.index == 1">
-		<h2>{{methodSelect.name}}</h2>
-		<p>An old favourite of predictive modellers, this method applies a linear multiplier to each predictor to determine an expected finishing time and thus place of each horse.</p>
-		<p>It is often the first method to use for many predictive problems.</p>
 		<h3>Pros</h3>
-		<p>Relatively simple, easily interpretable, and widely accepted by the business and scientific community.</p>
-		<p>It is also widely accessible via statistical software packages (e.g. SAS, R) or even MS Excel for smaller datasets.</p>
+		<p>Traditional regression is a well-understood approach with easily interpretable results, and widely accepted by the business and scientific community.</p>
+		<p>It is accessible via statistical software packages (e.g. SAS, R) or even MS Excel, for smaller datasets.</p>
 		<h3>Cons</h3>
-		<p>The assumptions inherent in a linear model simply do not apply to many real-world phenomena. For example, weight carried by a horse is probably not linearly related to their finishing time. In these cases, it is difficult or impossible to produce meaningful or accurate results using linear regression.</p>
+		<p>While many real-world scenarios are well-suited to these simple models, some require additional sophistication and flexibility. In these cases, alternatives such as machine learning techniques are more appropriate. </p>
 	</div>
 
 	<div ng-if="methodSelect.index == 2">
-		<h2>{{methodSelect.name}}</h2>
-		<p>A new entrant to the Melbourne Cup predictive method pool, it has been tested on client projects’ in preparation for this year’s analysis.</p>
-		<p>Machine learning is a branch of artificial intelligence that has found its way into a fields such as fraud detection, financial markets analysis, and horse racing. </p>
-		<p>Machine learning algorithms run via Python libraries and scripts produce a classification model that tells us whether a horse is expected to place in the top 5.</p>
 		<h3>Pros</h3>
-		<p>Handles non-linear relationships well.</p>
-		<p>Requires less data preparation compared to other methods (can handle missing data and un-normalised data).</p>
+		<p>Capable of elucidating complicated connections in data which are not immediately obvious, and producing accurate future predictions.  </p>
 		<h3>Cons</h3>
-		<p>Less popular and a lower level of understanding exists outside of the statistics community.</p>
-		<p>Takes more runtime and processing power than linear regression.</p>
-		<p>More prone to over fitting than linear regression.</p>
-	</div>
-
-	<div ng-if="methodSelect.index == 3">
-		<h2>{{methodSelect.name}}</h2>
-		<p>Usually for 1 on 1 ratings, how are we adjusting the method to deal with many horses in a race?</p>
-		<h3>Pros</h3>
-		<p>Some</p>
-		<h3>Cons</h3>
-		<p>Making generalisations across different time periods is difficult … ?</p>
+		<p>A lower level of understanding exists outside of the statistics community.</p>
+		<p>Machine learning approaches are also computationally demanding, and take a longer time to build. </p>
 	</div>
 
 	<div ng-if="methodSelect.index == 4">
-		<h2>{{methodSelect.name}}</h2>
-		<p>OK we admit it, there's no real mehod here, it's just pure flying by the seat of your pants luck, but generally it's the preferred method of the extremely infrequent gambler.</p>
 		<h3>Pros</h3>
 		<p>Well. Really. None. Except it's more fun this way.</p>
 		<h3>Cons</h3>

@@ -17,31 +17,25 @@
     		name : 'Please select a method...',
     		index : 0,
     		horse : ['one','two','three','four','five'],
-    		odds : [12,4,5,64,6]
+    		odds : [1,2,3,4,5]
     	},
     	{
 			name : 'Linear regression',
 			index: 1,
     		horse : ['one','two','three','four','five'],
-    		odds : [2,34,56,23,5]
+    		odds : [1,2,3,4,5]
 		},
 		{
-			name : 'Classification via machine learning',
+			name : 'Machine learning',
 			index: 2,
     		horse : ['one','two','three','four','five'],
-    		odds : [34,45,45,12,12]
-		},
-		{
-			name : 'ELO',
-			index: 3,
-    		horse : ['one','two','three','four','five'],
-    		odds : [45,25,64,75,97]
+    		odds : [1,2,3,4,5]
 		},
 		{
 			name : 'Best name or gut feel',
 			index : 4,
-    		horse : ['awesome','grumpy dumpling','i will win','horse racing is mean','five'],
-    		odds : [13,15,16,27,13]
+    		horse : ['one','two','three','four','five'],
+    		odds : [1,2,3,4,5]
 		}
 	]
 

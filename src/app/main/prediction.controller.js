@@ -15,23 +15,23 @@
     $scope.horses = [
         {
             name : 'horse 1',
-            odds : 12
+            odds : 10
         },
         {
             name : 'horse 2',
-            odds : 40
+            odds : 10
         },
         {
             name : 'horse 3',
-            odds : 17
+            odds : 10
         },
         {
             name : 'horse 4',
-            odds : 90
+            odds : 10
         },
         {
             name : 'horse 5',
-            odds : 12
+            odds : 10
         }
 	  ]
 
