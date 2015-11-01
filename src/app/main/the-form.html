@@ -7,12 +7,20 @@
                     <div class="col-xs-2">
                         <div class="horse-number-f">{{horse.number}}</div>
                     </div>
-                    <div class="col-xs-9">
+                    <div class="col-xs-8">
                         <h2>{{horse.name}}</h2>
-                        <p><span class="light">barrier:</span> {{horse.barrier}} &nbsp;&nbsp;&nbsp;&nbsp;<span class="light">weight: </span>{{horse.weight}}kg &nbsp;&nbsp;&nbsp;&nbsp;<span class="light">previous: </span>{{horse.previous}}</p>
-                        <p ng-show="horse.show"><span class="light">age:</span> {{horse.age}} years &nbsp;&nbsp;&nbsp;&nbsp;<span class="light">wins: </span>{{horse.wins}} &nbsp;&nbsp;&nbsp;&nbsp;<span class="light">place: </span>{{horse.place}} &nbsp;&nbsp;&nbsp;&nbsp;<span class="light">nationality: </span>{{horse.nationality}}</p>
+                        <p>
+                        <span class="xs-div"><span class="light">barrier:</span> {{horse.barrier}} </span>
+                        <span class="xs-div"><span class="light">weight: </span>{{horse.weight}}kg </span>
+                        <span class="xs-div"><span class="light">previous: </span>{{horse.previous}}</span>
+                        <p ng-show="horse.show">
+                        <span class="xs-div"><span class="light">age:</span> {{horse.age}} years </span>
+                        <span class="xs-div"><span class="light">wins: </span>{{horse.wins}} %</span>
+                        <span class="xs-div"><span class="light">place: </span>{{horse.place}} %</span>
+                        <span class="xs-div"><span class="light">nationality: </span>{{horse.nationality}}</span>
+                        </p>
                     </div>
-                    <div class="col-xs-1"><i class="glyphicon glyphicon-plus-sign"  ng-show="!horse.show"></i>
+                    <div class="col-xs-2"><i class="glyphicon glyphicon-plus-sign"  ng-show="!horse.show"></i>
                     <i class="glyphicon glyphicon-minus-sign" ng-show="horse.show"></i></div>
                 </div>
             </div>   

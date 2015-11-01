@@ -39,7 +39,7 @@
 				score: 79,
 				data1 : 
 					[{
-						"key": "Pork Consumed",
+						"key": "Pork consumed in AUS",
 						"values": [ [2005, 390], [2006, 383], [2007, 385], [2008, 345], [2009, 324], [2010, 339], [2011, 344], [2012, 352], [2013, 360], [2014, 362]],
 						"color": "#DB536A"
 					}],
@@ -51,12 +51,12 @@
 					}]
 			},
 			{
-				name : 'Unemployment Rate & Field size',
+				name : 'Unemployment rate & field size',
 				index: 2,
 				score: 77,
 				data1 : 
 					[{
-						"key": "Unemployment Rate",
+						"key": "Unemployment rate",
 						"values": [ [2005, 5.1], [2006, 4.9], [2007, 4.4], [2008, 4.2], [2009, 5.6], [2010, 5.1], [2011, 5.1], [2012, 5.2], [2013, 5.7]],
 						"color": "#DB536A"
 					
@@ -69,19 +69,19 @@
 					}]
 			},
 			{
-				name : 'Current Account Balance & Cup Attendance',
+				name : 'Current account balance & Cup attendance',
 				index: 3,
 				score: 73,
 				data1 : 
 					[{
-						"key": "Current Account Balance",
+						"key": "Current account balance",
 						"values": [ [2005, 4209], [2006, 4256], [2007, 2740], [2008, 4230], [2009, 4285], [2010, 5378], [2011, 4368], [2012, 3708], [2013, 3928]],
 						"color": "#DB536A"
 					
 					}],
 				data2 :
 					[{
-						"key": "Cup Attendance",
+						"key": "Cup attendance",
 						"values": [ [2005, 106479], [2006, 106691], [2007, 102411], [2008, 107280], [2009, 102161], [2010, 110223], [2011, 105979], [2012, 106162], [2013, 104169]],
 						"color": "#3F3F40"
 					}]
@@ -92,7 +92,7 @@
 				score: -80,
 				data1 : 
 					[{
-						"key": "Total spirits consumed",
+						"key": "Total spirits consumed in AUS",
 						"values": [ [2005, 34996], [2006, 35493], [2007, 37477], [2008, 38841], [2009, 35912], [2010, 35825], [2011, 36847], [2012, 35572], [2013, 36162]],
 						"color": "#DB536A"
 					}],

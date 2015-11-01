@@ -76,8 +76,19 @@
 	a{
 		color: $Burgundy;
 	}
+	p{
+	 margin-left: 0;
+	 margin-right: 0;
+	}
 }
 
 .light{
 	color: $Grey;
+}
+
+.xs-div{
+	margin-right: 20px;
+	@media (max-width: $screen-sm-min) {
+    display: block;
+  }
 }

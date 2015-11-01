@@ -11,7 +11,7 @@
 	</div>
 
 	<div ng-if="methodSelect.index == 2">
-		<p>A new entrant to the Melbourne Cup predictive method pool, machine learning is a branch of artificial intelligence that has found its way into many fields, including fraud detection, financial markets analysis, and horse racing.</p>
+		<p>A new entrant to the Melbourne Cup predictive method pool, machine learning is a branch of artificial intelligence that has found its way into many fields, including fraud detection, financial markets analysis, predicting safety incidents, and horse racing.</p>
 		<p>Algorithms, including decision trees and their ensemble counter-parts, use historical race results to ‘learn’ the complex relationship between a horse’s characteristics (weight, age, trainer etc.) and its most-likely finishing place or probability of winning.</p>
 	</div>
 
@@ -40,7 +40,9 @@
               </div>
           </div>
         </div>
-        <h4>{{methodSelect.horse[i]}}</h4>
+        <div class="h4-holder">
+	        <h4>{{methodSelect.horse[i]}}</h4>
+  			</div>
     	</div>
     </div>
 	</div>

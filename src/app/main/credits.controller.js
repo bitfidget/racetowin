@@ -18,7 +18,7 @@
       email: 'Alastair.Pearson@au.pwc.com',
       nickname: '20 Hands',
       team: 'Insight Analytics',
-      image: 'Al'
+      image: 'al'
       },
       {
       namefirst: 'Becky',
@@ -26,7 +26,7 @@
       email: 'Becky.Hunt@au.pwc.com',
       nickname: 'No Time For Trotting',
       team: 'Insight Analytics',
-      image: 'Becky'
+      image: 'becky'
       },
       {
       namefirst: 'Kriss',
@@ -51,7 +51,7 @@
       email: 'Matt.Carrigan@au.pwc.com',
       nickname: 'Numbles',
       team: 'Insight Analytics',
-      image: 'Matt'
+      image: 'matt'
       },
       {
       namefirst: 'Celestine',
@@ -59,7 +59,7 @@
       email: 'Celestine.Bond@au.pwc.com',
       nickname: 'All The Things',
       team: 'Insight Analytics',
-      image: 'Cel'
+      image: 'cel'
       },
       {
       namefirst: 'Cameron',
@@ -67,7 +67,7 @@
       email: 'Cameron.Maxwell@au.pwc.com',
       nickname: 'Agent 86',
       team: 'Insight Analytics',
-      image: 'CamM'
+      image: 'camm'
       },
       {
       namefirst: 'Cameron',
@@ -75,15 +75,15 @@
       email: 'Cameron.Cuthbert@au.pwc.com',
       nickname: 'Chobani Champ',
       team: 'Insight Analytics',
-      image: 'CamC'
+      image: 'camc'
       },
       {
       namefirst: 'Peter',
       namelast: 'Shi',
       email: 'Peter.Shi@au.pwc.com',
-      nickname: 'Fish',
+      nickname: 'Zen',
       team: 'Insight Analytics',
-      image: 'Pete'
+      image: 'pete'
       },
       {
       namefirst: 'Ruaridh',
@@ -91,7 +91,7 @@
       email: 'Ruaridh.Williamson@au.pwc.com',
       nickname: 'Race Day',
       team: 'Insight Analytics',
-      image: 'Ruaridh'
+      image: 'ruari'
       },
       {
       namefirst: 'Billy',
@@ -99,7 +99,7 @@
       email: 'Billy.Jaya@au.pwc.com',
       nickname: 'On Air',
       team: 'Insight Analytics',
-      image: 'Billy'
+      image: 'billy'
       },
       {
       namefirst: 'Justin',
@@ -107,7 +107,7 @@
       email: 'Justin.Wong@au.pwc.com',
       nickname: 'Time',
       team: 'Insight Analytics',
-      image: 'Justin'
+      image: 'justin'
       },
       {
       namefirst: 'Ruan',
@@ -115,7 +115,7 @@
       email: 'Ruan.Jordaan@au.pwc.com',
       nickname: 'Slam Dunk',
       team: 'Insight Analytics',
-      image: 'Ruan'
+      image: 'ruan'
       },
       {
       namefirst: 'Clare',
@@ -131,7 +131,7 @@
       email: 'Rory.Anderson@au.pwc.com',
       nickname: 'Mista',
       team: 'Insight Analytics',
-      image: 'Rory'
+      image: 'rory'
       },
       {
       namefirst: 'Jakob',

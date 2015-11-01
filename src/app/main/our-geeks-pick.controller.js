@@ -33,7 +33,7 @@
          name : 'Best name or gut feel',
          index: 4,
           horse : ['Gust Of Wind','Max Dynamite','Fame Game','Trip To Paris','Bondi Beach'],
-          odds : [3.5,34,15,9,21]
+          odds : [34,15,3.5,9,21]
         }
 	]
 
