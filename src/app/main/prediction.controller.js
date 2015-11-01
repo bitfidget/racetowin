@@ -14,24 +14,24 @@
 
     $scope.horses = [
         {
-            name : 'horse 1',
-            odds : 10
+            name : 'Fame Game',
+            odds : 3.5
         },
         {
-            name : 'horse 2',
-            odds : 10
+            name : 'Preferment',
+            odds : 9
         },
         {
-            name : 'horse 3',
-            odds : 10
+            name : 'Trip To Paris',
+            odds : 9
         },
         {
-            name : 'horse 4',
-            odds : 10
+            name : 'Almoonqith',
+            odds : 14
         },
         {
-            name : 'horse 5',
-            odds : 10
+            name : 'The United States',
+            odds : 21
         }
 	  ]
 
@@ -49,11 +49,11 @@
     };
 
     $scope.barSize = function(num) {
-        return (200 - (num * 200/$scope.barMax()) + 36);
+        return (200 - (num * 200/$scope.barMax()));
     }
 
     $scope.barHeight = function(num) {
-    	return (num * 200/$scope.barMax());
+    	return (num * 200/$scope.barMax()) + 30;
     }
 
   }

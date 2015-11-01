@@ -44,33 +44,8 @@
       })
       .when('/credits', {
         templateUrl: 'app/main/credits.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      })
-      .when('/race-to-win/', {
-        templateUrl: 'app/race/race-home.html',
-        controller: 'RaceHomeController',
-        controllerAs: 'raceHome'
-      })
-    //   .when('/race-to-win/race/', {
-    //     templateUrl: 'app/race/race.html',
-    //     controller: 'RaceController',
-    //     controllerAs: 'race'
-    //   })
-      .when('/race-to-win/leaderboard/', {
-        templateUrl: 'app/race/leaderboard.html',
-        controller: 'LeaderboardController',
-        controllerAs: 'leaderboard'
-      })
-      .when('/race-to-win/race', {
-        templateUrl: 'app/race/race.html',
-        controller: 'RaceController',
-        controllerAs: 'race'
-      })
-      .when('/race-to-win/race/:raceName', {
-        templateUrl: 'app/race/race.html',
-        controller: 'RaceController',
-        controllerAs: 'race'
+        controller: 'CreditsController',
+        controllerAs: 'credits'
       })
       .otherwise({
         redirectTo: '/'

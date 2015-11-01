@@ -22,7 +22,9 @@
       isArea="true"
       yaxislabel="{{correlationSelect.data1[0].key}}"
       forceY="minMax(correlationSelect.data1[0].values)" 
-      yaxislabeldistance="0"    
+      yaxislabeldistance="0"
+      showLegend="true"
+      legendMargin="{left:0,top:15,bottom:35,right:00}"
       >
       <svg></svg>
     </nvd3-line-chart>
@@ -40,6 +42,8 @@
       rightAlignYAxis="true"
       yaxislabel="{{correlationSelect.data2[0].key}}"
       forceY="minMax(correlationSelect.data2[0].values)"
+      showLegend="true"
+      legendMargin="{left:0,top:25,bottom:25,right:0}"
       >
       <svg></svg>
     </nvd3-line-chart>
@@ -52,9 +56,14 @@
   </div>
 
   <div ng-if="correlationSelect.index == 2">
+    <p>As economic times get tough and jobs become harder to find, Australians have been turning to the horse racing industry as a way of making ends meet.</p>
+    <p>Behind every Melbourne Cup entry is a team dedicated to fulfilling every whim of the horse so that it can focus on one thing - running.</p>
+    <p>However, these are very much part time jobs and it's no surprise that they head back to Centrelink once the races are over.</p>
   </div>
 
   <div ng-if="correlationSelect.index == 3">
+    <p>The Melbourne Cup is known as 'the race which stops the nation' but is also less widely known as 'the race which boosts the economy'.</p>
+    <p>Using hidden cameras at the event, we have discovered that local Australian companies are taking advantage of the lively atmosphere of the event to convince their international business partners to engage in beneficial deals. This opportunistic behaviour seems to foster the health of Australian products in overseas markets.</p>
   </div>
 
   <div ng-if="correlationSelect.index == 4">

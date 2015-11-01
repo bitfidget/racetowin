@@ -7,13 +7,17 @@
     position: relative;
     margin: 0 auto;
     overflow: hidden;
-    transition: all 2s ease;
     span {
         width: 100%;
         display: block;
         font-size: 1.4em;
     }
 }
+
+.horse-gif-holder div{
+    transition: all ease 1s;
+}
+
 .zero-height {
     padding-top: 200px !important;
 }
@@ -35,8 +39,8 @@
 }
 
 .horse-gif-holder{
-    max-height: 236px;
-    min-height: 236px;
+    max-height: 286px;
+    min-height: 286px;
     overflow: hidden;
 }
 

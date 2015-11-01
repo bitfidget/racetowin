@@ -11,8 +11,10 @@
             $rootScope.bodyClass = 'home';
         }
 
-    	$scope.navMe = function(route) {
-    		$scope.hamburgerState = !$scope.hamburgerState;
+    	$scope.navMe = function(route, nav) {
+            if (!nav) {
+        		$scope.hamburgerState = !$scope.hamburgerState;
+            }
     		$location.path(route);
     	}
 

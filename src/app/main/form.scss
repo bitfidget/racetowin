@@ -21,7 +21,10 @@
 }
 
 .form-list h2{
-	line-height: 48px;
+}
+
+.form-list p{
+	margin-bottom: 0;
 }
 
 
@@ -43,10 +46,38 @@
 	border-radius: 50%;
 	font-family: $charter;
 	line-height: 42px;
+	overflow: hidden;
+}
+
+.horse-number{
+	display: block;
+	background: $DarkGrey;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	color: #FFF;
+	font-size: 15px;
+	border-radius: 50%;
+	font-family: $charter;
+	line-height: 21px;
+	color: #FFF !important;
+	margin: 15px auto !important;
 }
 
 .horse-overview{
 	margin: 0;
 	font-family: $charter;
 	padding: 15px 0;
+	i{
+		font-size: 2em;
+		padding-top: 12px;
+		color: lighten($DarkGrey, 40%)
+	}
+	a{
+		color: $Burgundy;
+	}
+}
+
+.light{
+	color: $Grey;
 }

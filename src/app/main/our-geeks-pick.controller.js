@@ -19,24 +19,22 @@
     		horse : ['one','two','three','four','five'],
     		odds : [1,2,3,4,5]
     	},
-    	{
-			name : 'Linear regression',
-			index: 1,
-    		horse : ['one','two','three','four','five'],
-    		odds : [1,2,3,4,5]
-		},
-		{
-			name : 'Machine learning',
-			index: 2,
-    		horse : ['one','two','three','four','five'],
-    		odds : [1,2,3,4,5]
-		},
-		{
-			name : 'Best name or gut feel',
-			index : 4,
-    		horse : ['one','two','three','four','five'],
-    		odds : [1,2,3,4,5]
-		}
+        {
+         name : 'Linear Regression',
+         index: 1,
+          horse : ['Fame Game','Preferment','Criterion','Max Dynamite','Trip To Paris'],
+          odds : [3.5,9,13,15,9]
+        },  {
+         name : 'Machine learning',
+         index: 2,
+          horse : ['Fame Game','Preferment','Trip To Paris','Almoonqith','Who Shot Thebarman'],
+          odds : [3.5,9,9,14,17]
+        },  {
+         name : 'Best name or gut feel',
+         index: 4,
+          horse : ['Gust Of Wind','Max Dynamite','Fame Game','Trip To Paris','Bondi Beach'],
+          odds : [3.5,34,15,9,21]
+        }
 	]
 
     $scope.methodSelect = $scope.methods[0];

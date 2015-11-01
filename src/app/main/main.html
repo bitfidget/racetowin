@@ -1,6 +1,36 @@
 <div class="container" id="home" style="min-height: {{contHeight}}px">
 	<h1 class="centered first">It’s that time of year again, when the nation stops to witness the Melbourne Cup!</h1>
+	<p class="text-center">
+		<img src="/assets/images/horse-group-sm.png" alt="horses">
+	</p>
 	<p>The excitement of the day is shared among millions of people around the world, where the most prestigious horses, jockeys and owners come together to race in one of Australia’s most popular sporting events.</p>
 	<p>PwC’s Insight Analytics team and the PwC Experience Centre have paired up and gone completely digital this year to bring you an interactive and personalised experience of the Melbourne Cup.</p>
-	<h3 class="text-center">We take no responsibility if you lose!</h3>
-</div> 
+
+
+	<div class="home-icons">
+		<div class="row">
+			<div class="col-xs-12 clickable" ng-click="navMe('/our-prediction', true)">
+				<img src="/assets/images/icon-home-top-5.gif" alt="top 5" class="pull-left">
+
+				<h3 class="text-left">Our top 5 performers</h3>
+				<p class="text-left">We've crunched the numbers to bring you our picks for the year</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 clickable" ng-click="navMe('/our-geeks-pick', true)">
+				<img src="/assets/images/icon-home-geek.gif" alt="geek zone" class="pull-left">
+
+				<h3>Geek zone</h3>
+				<p>Our team share some different modelling techniques and results</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 clickable" ng-click="navMe('/your-horsey-name', true)">
+				<img src="/assets/images/icon-home-name.gif" alt="horsey name" class="pull-left">
+
+				<h3>Discover your horsey name</h3>
+				<p>Feel like running in the cup yourself? You'll need a name. We can help!</p>
+			</div>
+		</div>
+	</div>
+</div>

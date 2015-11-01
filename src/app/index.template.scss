@@ -30,8 +30,12 @@ body{
 }
 
 body{
-	background: url(/assets/svg/bg-home.svg) center no-repeat;
+	background-color: $DarkGrey;
+	@media (min-width: $screen-sm-min) {
+    background: url(/assets/images/test-04.jpg) center top no-repeat;
+  }
 	background-size: cover;
+	background-attachment: fixed !important;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -85,9 +89,7 @@ div {
 	padding-top: 60px;
 }
 
-#home{
-	min-height: 900px !important;
-}
+
 
 #footer{
 	.text-center{
@@ -183,7 +185,7 @@ div {
 h1{
 	font-size: 24px;
 	font-weight: bold;
-	line-height: 100%;
+	line-height: 130%;
 	text-align: center;
 }
 
@@ -245,10 +247,10 @@ form input{
 .btn-select{
 	width: 90%;
 	display: block;
-	padding: 20px;
 	margin: 20px 5%;
 	background: $Burgundy;
 	color: #FFF;
+	border: solid 1px transparent;
 }
 
 .btn-select option{
@@ -257,6 +259,7 @@ form input{
 
 .btn-select:hover{
 	color: #FFF;
+	border: solid 1px transparent;
 }
 
 #blurb-home{
@@ -273,4 +276,15 @@ form input{
 	left: 0;
 	width: 100%;
 	color: #FFF;
+}
+
+.home-icons{
+	text-align: left !important;
+	h3{
+		text-align: left !important;
+	}
+	img{
+		max-width: 75px;
+		padding: 20px 20px 20px 0;
+		}
 }

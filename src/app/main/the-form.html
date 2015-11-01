@@ -4,42 +4,16 @@
         <div class="row form-list" ng-repeat="horse in horses track by $index" ng-class-odd="'odd'" ng-class-even="'even'">
             <div class="clickable" ng-click="horse.show = !horse.show">
                 <div class="row horse-overview">
-                    <div class="col-xs-6">
-                        <div class="horse-number-f pull-left">{{horse.number}}</div>
-                        <h2>{{horse.name}}</h2>
-                    </div>
-                    <div class="col-xs-3">
-                        <div class="row text-right">
-                            weight: <br>
-                            previous:
-                        </div>
-                    </div>
                     <div class="col-xs-2">
-                        {{horse.weight}}kg<br>
-                        {{horse.previous}}
+                        <div class="horse-number-f">{{horse.number}}</div>
                     </div>
-                    <div class="col-xs-1 text-right"><i class="glyphicon glyphicon-plus-sign"  ng-show="!horse.show"></i>
+                    <div class="col-xs-9">
+                        <h2>{{horse.name}}</h2>
+                        <p><span class="light">barrier:</span> {{horse.barrier}} &nbsp;&nbsp;&nbsp;&nbsp;<span class="light">weight: </span>{{horse.weight}}kg &nbsp;&nbsp;&nbsp;&nbsp;<span class="light">previous: </span>{{horse.previous}}</p>
+                        <p ng-show="horse.show"><span class="light">age:</span> {{horse.age}} years &nbsp;&nbsp;&nbsp;&nbsp;<span class="light">wins: </span>{{horse.wins}} &nbsp;&nbsp;&nbsp;&nbsp;<span class="light">place: </span>{{horse.place}} &nbsp;&nbsp;&nbsp;&nbsp;<span class="light">nationality: </span>{{horse.nationality}}</p>
+                    </div>
+                    <div class="col-xs-1"><i class="glyphicon glyphicon-plus-sign"  ng-show="!horse.show"></i>
                     <i class="glyphicon glyphicon-minus-sign" ng-show="horse.show"></i></div>
-
-                    
-                    
-
-                    <div class="expanded p20" ng-show="horse.show">
-                        <div class="row">
-                            <div class="col-xs-2 text-right">age: </div>
-                            <div class="col-xs-2">{{horse.age}} years</div>
-                            <div class="col-xs-2 text-right">wins (%): </div>
-                            <div class="col-xs-2">{{horse.wins}} years</div>
-                            <div class="col-xs-2 text-right">place (%): </div>
-                            <div class="col-xs-2">{{horse.place}}</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-2 text-right">nationality: </div>
-                            <div class="col-xs-2">{{horse.nationality}}</div>
-                            <div class="col-xs-2 text-right">track: </div>
-                            <div class="col-xs-2">{{horse.track}}</div>
-                        </div>
-                    </div>
                 </div>
             </div>   
         </div>
